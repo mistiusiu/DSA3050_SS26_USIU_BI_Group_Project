@@ -40,4 +40,4 @@ The project uses a star schema data model designed to analyze social media engag
 
 
 ## Data Model Diagram
-(![alt text](image.png))
+![alt text](image.png)
