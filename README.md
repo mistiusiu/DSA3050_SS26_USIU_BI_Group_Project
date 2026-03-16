@@ -38,6 +38,22 @@ This dataset contains 21,677 tweets collected from 23 Destination Marketing Orga
 
 The project uses a star schema data model designed to analyze social media engagement. In this model, a central fact table stores engagement metrics for tweets, while several dimension tables provide contextual information such as time, content type, influencer status, and posting characteristics.
 
+### Tables in the Data Model
+
+The model consists of one fact table and several dimension tables:
+
+Fact_SocialMediaEngagement – Contains the main quantitative metrics such as engagement counts, follower counts, sentiment scores, and linguistic features.
+- Dim_Date - Stores date-related attributes used for time-based analysis.
+- Dim_State - Represents the geographic location associated with each tweet.
+- Dim_PostType - Contains the different types of posts (Photo, Video, Text, Link, Poll).
+- Dim_ContentType - Describes the category of content shared in the tweet.
+- Dim_Phase - Represents the campaign or timeline phase of the post.
+- Dim_OpenHours - Indicates whether a tweet was posted during working or non-working hours.
+- Dim_Day - Identifies the day of the week.
+- Dim_DayType - Distinguishes between weekdays and weekends.
+- Dim_InfluencerStatus - Indicates whether the account is classified as an influencer.
+
+These dimension tables provide descriptive context that allows engagement metrics in the fact table to be analyzed across different categories such as time, content type, and posting characteristics.
 
 ## Data Model Diagram
 ![alt text](image.png)
