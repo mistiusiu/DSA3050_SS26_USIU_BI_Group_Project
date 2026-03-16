@@ -56,4 +56,4 @@ Fact_SocialMediaEngagement – Contains the main quantitative metrics such as en
 These dimension tables provide descriptive context that allows engagement metrics in the fact table to be analyzed across different categories such as time, content type, and posting characteristics.
 
 ## Data Model Diagram
-![alt text](image.png)
+![Data Model Diagram](screenshots/data_model_diagram.png)
