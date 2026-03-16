@@ -6,18 +6,67 @@ Social media platforms like Twitter are widely used by organizations to engage w
 
 
 ## Business Questions
-The analysis aims to answer the following questions:
-1.	How does influencer status affect tweet engagement?
-2.	Which generates the highest engagement?
-3.	How did engagement patterns change across different phases (pre-COVID, lockdown,        post-COVID)?
-4.	Which day of the week has more engagement?
-5.	Which state has the influencers with highest number of followers based on average?
-6.	Which influencer type have most negative /positive sentiments?
-7.	Does posting during working hours or non-working hours affect engagement?
-8.	Do tweets posted on weekends perform differently than weekdays?
-9.	What content type does different influencers post?
-10.	In what state when posts are made that have the highest engagement?
-11.	Does word count (WC) influence engagement levels?
+
+1. **Influencer Impact:** How does influencer status affect tweet engagement?
+2. **Content Performance:** Which post type generates the highest engagement?
+3. **Phase Shifts:** How did engagement patterns change across different phases (pre-COVID, lockdown, post-COVID)?
+4. **Peak Activity:** Which day of the week and hour has more engagement across different phases?
+5. **Geography & Influence:** Which state has the influencers with the highest number of followers on average?
+6. **Sentiment Analysis:** Which influencer type has the most negative/positive sentiments?
+7. **Behavioral Patterns:** What post types do different influencers post?
+8. **Regional Engagement:** Which states have the highest post engagement?
+9. **Length vs. Impact:** Does word count (WC) influence engagement levels?
+10. **Verbosity vs. Impact:** Does verbosity influence engagement levels?
+11. **Timeline Trends:** How do engagement levels change over time?
+
+## Visuals
+
+### Slicers
+
+- Day
+- Open_Hours
+- Phase (4_Phase)
+- Post_Type
+- Content_Type
+- Influencer_Status
+- Verbosity
+
+### Graphs
+
+1. Influencer & Sentiment Deep-Dive
+
+    - Influencer Engagement (Radar Chart): Disaggregated by Phase.
+
+    - Influencer Engagement (Bar Chart): Disaggregated by Verbosity.
+
+    - Influencer Sentiment (Waterfall Chart): Positive vs. Negative sentiments by influencer type.
+
+    - Follower Density (Bar Chart): Top N states with highest average influencer followers.
+
+    - Influencer Behavior (Radar Chart): Post type distribution per influencer.
+
+2. Content & Performance Metrics
+
+    - Type Performance (Column Chart): Disaggregated by Content_Type.
+
+    - Word Count Analysis (Scatter Plot): Engagement vs. Word Count (WC).
+
+    - Verbosity Impact (Combo Line & Bar Chart): Engagement levels across verbosity categories.
+
+    - Regional Performance (Bar Chart): Top N states by post engagement.
+
+3. Temporal & Phase Analysis
+
+    - Phase Distribution (Box Plot): Engagement patterns across pre-COVID, lockdown, and post-COVID.
+
+    - Engagement Hotspots (Heatmap):   
+        ```
+        X-axis: Phase   
+        Y-axis: Day + Open_Hours   
+        Values: Engagement
+        ```
+
+    - Trend Timeline (Line Chart): Engagement levels over Date.
 
 
 ## Data Sources
@@ -29,8 +78,12 @@ Source: Kaggle
 Accessed via Kaggle:
 https://www.kaggle.com/datasets/jocelyndumlao/dmo-social-media-engagement-dataset
 
+![Kaggle DMO Social Media Engagement Dataset](screenshots/kaggle_data_source.png)
+
 Primary Source:
 https://data.mendeley.com/datasets/bfk3hvdcnt/1
+
+![Mendley DMO Social Media Engagement Dataset](screenshots/mendley_data_source.png)
 
 This dataset contains 21,677 tweets collected from 23 Destination Marketing Organizations (DMOs) between March 25, 2019 and January 31, 2022. It was created to study how social media content strategies and linguistic features affect user engagement on Twitter. 
 
