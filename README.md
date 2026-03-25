@@ -165,7 +165,7 @@ The measure creates a virtual table grouping posts by type with their total enga
 
 **Functions Used:** `VAR`, `TOPN`, `SUMMARIZE`, `CONCATENATEX`
 
-**Why it's advanced:**  
+**Key Techniques:**  
 Unlike a simple `MAXX` which only returns a number, this measure returns the actual category name (e.g., "Video") in a stakeholder-friendly format. It demonstrates the ability to combine multiple DAX functions to produce dynamic, readable outputs.
 
 **Business Value:**  
@@ -184,7 +184,7 @@ The measure first calculates total engagement across all post types (ignoring an
 
 **Functions Used:** `CALCULATE`, `ALL`, `DIVIDE`
 
-**Why it's advanced:**  
+**Key Techniques:**  
 Demonstrates the essential `CALCULATE` + `ALL` pattern required for percentage-of-total calculations. This pattern is fundamental to portfolio analysis and is widely used in enterprise BI solutions.
 
 **Business Value:**  
@@ -203,7 +203,7 @@ The measure dynamically determines the average positive sentiment score, then fi
 
 **Functions Used:** `CALCULATE`, `FILTER`
 
-**Why it's advanced:**  
+**Key Techniques:**  
 Uses the `CALCULATE` + `FILTER` pattern to enable dynamic conditional analysis. When paired with `High Sentiment Engagement` (which filters for above-average sentiment), it creates a true A/B test comparing performance across sentiment groups.
 
 **Business Value:**  
