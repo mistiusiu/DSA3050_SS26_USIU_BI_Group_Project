@@ -174,7 +174,7 @@ Directly answers *"What type of content should we create more of?"* Enables data
 ---
 
 #### 2. Post Type Share of Engagement
-**Business Question:** * What percentage of total engagement does each content format contribute? *
+**Business Question:** *What percentage of total engagement does each content format contribute?*
 
 **What it does:**  
 Calculates the percentage contribution of each content type to total engagement.
@@ -193,7 +193,7 @@ Reveals engagement concentration—for example, if videos drive 60% of engagemen
 ---
 
 #### 3. Low Sentiment Engagement
-** Business Question:** * Does below-average positive sentiment hurt engagement performance?*
+**Business Question:** *Does below-average positive sentiment hurt engagement performance?*
 
 **What it does:**  
 Measures average engagement specifically for posts with below-average positive sentiment.
@@ -208,3 +208,13 @@ Uses the `CALCULATE` + `FILTER` pattern to enable dynamic conditional analysis. 
 
 **Business Value:**  
 Answers the critical question *"Does positive content actually drive higher engagement?"* Quantifies the ROI of maintaining positive brand tone and provides data-backed justification for content guidelines.
+
+
+---
+#### Contributors: 
+**Vivian Kipsang -** 
+**Misati Nyambane-**
+**Trizah Nzioka-**
+**Samantha Masaki-**
+**Levin Ekuam-**
+**Ilham Mohammed-**
