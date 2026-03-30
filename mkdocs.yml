@@ -1,4 +1,5 @@
 site_name: Social Media Sentiment BI Analytics
+site_url: https://mistiusiu.github.io/DSA3050_SS26_USIU_BI_Group_Project/
 theme:
   name: material
   palette:
