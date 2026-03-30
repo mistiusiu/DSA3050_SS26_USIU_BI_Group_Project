@@ -1,0 +1,1540 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="project-setup/problem-statement/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/usiu-logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Social Media Sentiment BI Analytics</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra-minimal.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#social-media-sentiment-bi-analytics" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Social Media Sentiment BI Analytics" class="md-header__button md-logo" aria-label="Social Media Sentiment BI Analytics" data-md-component="logo">
+      
+  <img src="assets/usiu-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Social Media Sentiment BI Analytics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Social Media Sentiment BI Analytics" class="md-nav__button md-logo" aria-label="Social Media Sentiment BI Analytics" data-md-component="logo">
+      
+  <img src="assets/usiu-logo.png" alt="logo">
+
+    </a>
+    Social Media Sentiment BI Analytics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="CONTENTS">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      CONTENTS
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problem-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Statement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visuals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visuals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visuals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slicers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slicers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Graphs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Sources
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-model-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Model Description
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Model Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tables-in-the-data-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tables in the Data Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-model-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Model Diagram
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dax-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DAX Measures
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DAX Measures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete-measures-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete Measures List
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complex-measure-explanations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complex Measure Explanations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Complex Measure Explanations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-top-post-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Top Post Type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-post-type-share-of-engagement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Post Type Share of Engagement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-low-sentiment-engagement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Low Sentiment Engagement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contributors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contributors:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project Definition
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Project Definition
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="project-setup/problem-statement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Statement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="project-setup/data-dictionary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Dictionary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="power-query/transformations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ETL & Power Query
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="data-modeling/star-schema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DAX Calculations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DAX Calculations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dax-development/measures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Measures Library
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dax-development/logic-deep-dive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Logic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Insights & Visuals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Insights & Visuals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dashboard/visuals-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Strategy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dashboard/insights/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Business Insights
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="deployment/service-links/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Final Delivery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="CONTENTS">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      CONTENTS
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problem-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Statement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visuals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visuals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visuals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slicers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slicers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Graphs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Sources
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-model-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Model Description
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Model Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tables-in-the-data-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tables in the Data Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-model-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Model Diagram
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dax-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DAX Measures
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DAX Measures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete-measures-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete Measures List
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complex-measure-explanations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complex Measure Explanations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Complex Measure Explanations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-top-post-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Top Post Type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-post-type-share-of-engagement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Post Type Share of Engagement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-low-sentiment-engagement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Low Sentiment Engagement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contributors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contributors:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="social-media-sentiment-bi-analytics">Social Media Sentiment BI Analytics</h1>
+<h2 id="problem-statement">Problem Statement</h2>
+<p>Social media platforms like Twitter are widely used by organizations to engage with audiences. However, it is often unclear which factors such as content type, posting time, sentiment, or audience size drive higher engagement (likes, replies, and retweets). This project analyzes a dataset of tweets from Destination Marketing Organizations to identify patterns and factors that influence social media engagement.</p>
+<h2 id="business-questions">Business Questions</h2>
+<ol>
+<li><strong>Influencer Impact:</strong> How does influencer status affect tweet engagement?</li>
+<li><strong>Content Performance:</strong> Which post type generates the highest engagement?</li>
+<li><strong>Phase Shifts:</strong> How did engagement patterns change across different phases (pre-COVID, lockdown, post-COVID)?</li>
+<li><strong>Peak Activity:</strong> Which day of the week and hour has more engagement across different phases?</li>
+<li><strong>Geography &amp; Influence:</strong> Which state has the influencers with the highest number of followers on average?</li>
+<li><strong>Sentiment Analysis:</strong> Which influencer type has the most negative/positive sentiments?</li>
+<li><strong>Behavioral Patterns:</strong> What post types do different influencers post?</li>
+<li><strong>Regional Engagement:</strong> Which states have the highest post engagement?</li>
+<li><strong>Length vs. Impact:</strong> Does word count (WC) influence engagement levels?</li>
+<li><strong>Verbosity vs. Impact:</strong> Does verbosity influence engagement levels?</li>
+<li><strong>Timeline Trends:</strong> How do engagement levels change over time?</li>
+</ol>
+<h2 id="visuals">Visuals</h2>
+<h3 id="slicers">Slicers</h3>
+<ul>
+<li>Day</li>
+<li>Open_Hours</li>
+<li>Phase (4_Phase)</li>
+<li>Post_Type</li>
+<li>Content_Type</li>
+<li>Influencer_Status</li>
+<li>Verbosity</li>
+</ul>
+<h3 id="graphs">Graphs</h3>
+<ol>
+<li>
+<p>Influencer &amp; Sentiment Deep-Dive</p>
+<ul>
+<li>
+<p>Influencer Engagement (Radar Chart): Disaggregated by Phase.</p>
+</li>
+<li>
+<p>Influencer Engagement (Bar Chart): Disaggregated by Verbosity.</p>
+</li>
+<li>
+<p>Influencer Sentiment (Waterfall Chart): Positive vs. Negative sentiments by influencer type.</p>
+</li>
+<li>
+<p>Follower Density (Bar Chart): Top N states with highest average influencer followers.</p>
+</li>
+<li>
+<p>Influencer Behavior (Radar Chart): Post type distribution per influencer.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Content &amp; Performance Metrics</p>
+<ul>
+<li>
+<p>Type Performance (Column Chart): Disaggregated by Content_Type.</p>
+</li>
+<li>
+<p>Word Count Analysis (Scatter Plot): Engagement vs. Word Count (WC).</p>
+</li>
+<li>
+<p>Verbosity Impact (Combo Line &amp; Bar Chart): Engagement levels across verbosity categories.</p>
+</li>
+<li>
+<p>Regional Performance (Bar Chart): Top N states by post engagement.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Temporal &amp; Phase Analysis</p>
+<ul>
+<li>
+<p>Phase Distribution (Box Plot): Engagement patterns across pre-COVID, lockdown, and post-COVID.</p>
+</li>
+<li>
+<p>Engagement Hotspots (Heatmap): <br />
+    <div class="highlight"><pre><span></span><code>X-axis: Phase   
+Y-axis: Day + Open_Hours   
+Values: Engagement
+</code></pre></div></p>
+</li>
+<li>
+<p>Trend Timeline (Line Chart): Engagement levels over Date.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="data-sources">Data Sources</h2>
+<p>Dataset: DMO Social Media Engagement Dataset</p>
+<p>Source: Kaggle</p>
+<p>Accessed via Kaggle:
+https://www.kaggle.com/datasets/jocelyndumlao/dmo-social-media-engagement-dataset</p>
+<p><img alt="Kaggle DMO Social Media Engagement Dataset" src="assets/kaggle_data_source.png" /></p>
+<p>Primary Source:
+https://data.mendeley.com/datasets/bfk3hvdcnt/1</p>
+<p><img alt="Mendley DMO Social Media Engagement Dataset" src="assets/mendley_data_source.png" /></p>
+<p>This dataset contains 21,677 tweets collected from 23 Destination Marketing Organizations (DMOs) between March 25, 2019 and January 31, 2022. It was created to study how social media content strategies and linguistic features affect user engagement on Twitter. </p>
+<h2 id="data-model-description">Data Model Description</h2>
+<p>The project uses a star schema data model designed to analyze social media engagement. In this model, a central fact table stores engagement metrics for tweets, while several dimension tables provide contextual information such as time, content type, influencer status, and posting characteristics.</p>
+<h3 id="tables-in-the-data-model">Tables in the Data Model</h3>
+<p>The model consists of one fact table and several dimension tables:</p>
+<p>Fact_SocialMediaEngagement – Contains the main quantitative metrics such as engagement counts, follower counts, sentiment scores, and linguistic features.
+- Dim_Date - Stores date-related attributes used for time-based analysis.
+- Dim_State - Represents the geographic location associated with each tweet.
+- Dim_PostType - Contains the different types of posts (Photo, Video, Text, Link, Poll).
+- Dim_ContentType - Describes the category of content shared in the tweet.
+- Dim_Phase - Represents the campaign or timeline phase of the post.
+- Dim_OpenHours - Indicates whether a tweet was posted during working or non-working hours.
+- Dim_Day - Identifies the day of the week.
+- Dim_DayType - Distinguishes between weekdays and weekends.
+- Dim_InfluencerStatus - Indicates whether the account is classified as an influencer.</p>
+<p>These dimension tables provide descriptive context that allows engagement metrics in the fact table to be analyzed across different categories such as time, content type, and posting characteristics.</p>
+<h2 id="data-model-diagram">Data Model Diagram</h2>
+<p><img alt="Data Model Diagram" src="assets/data_model_diagram.png" /></p>
+<h2 id="dax-measures">DAX Measures</h2>
+<h3 id="overview">Overview</h3>
+<p>We developed a total of <strong>21 DAX measures</strong> to support the business questions. Measures are organized by functional category and stored in a dedicated <code>_Measures</code> table for clean model organization.</p>
+<hr />
+<h3 id="complete-measures-list">Complete Measures List</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Measure Name</th>
+<th>Category</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>Total Posts</code></td>
+<td>Aggregation</td>
+<td>Count of all published posts</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>Total Likes</code></td>
+<td>Aggregation</td>
+<td>Sum of all likes received</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>Total Retweets</code></td>
+<td>Aggregation</td>
+<td>Sum of all retweets/shares</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Total Engagement</code></td>
+<td>Aggregation</td>
+<td>Sum of all engagement actions (likes + retweets + replies + quotes)</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Avg Engagement per Post</code></td>
+<td>Aggregation</td>
+<td>Average engagement per post</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>Avg Engagement by Post Type</code></td>
+<td>Aggregation</td>
+<td>Average engagement grouped by content format</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>Avg Engagement by Day</code></td>
+<td>Aggregation</td>
+<td>Average engagement grouped by day of week</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Avg Positive Sentiment</code></td>
+<td>Aggregation</td>
+<td>Average positive sentiment score</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>Avg Negative Sentiment</code></td>
+<td>Aggregation</td>
+<td>Average negative sentiment score</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>Engagement YTD</code></td>
+<td>Time Intelligence</td>
+<td>Year-to-date total engagement</td>
+</tr>
+<tr>
+<td>11</td>
+<td><code>Engagement MTD</code></td>
+<td>Time Intelligence</td>
+<td>Month-to-date total engagement</td>
+</tr>
+<tr>
+<td>12</td>
+<td><code>Engagement YoY % Change</code></td>
+<td>Percentage Change</td>
+<td>Year-over-year growth rate</td>
+</tr>
+<tr>
+<td>13</td>
+<td><code>Engagement QoQ % Change</code></td>
+<td>Percentage Change</td>
+<td>Quarter-over-quarter growth rate</td>
+</tr>
+<tr>
+<td>14</td>
+<td><code>Engagement Growth Trend</code></td>
+<td>KPI</td>
+<td>Change in growth rate (acceleration/deceleration)</td>
+</tr>
+<tr>
+<td>15</td>
+<td><code>Engagement Rate</code></td>
+<td>KPI</td>
+<td>Engagement per 1,000 followers</td>
+</tr>
+<tr>
+<td>16</td>
+<td><code>Net Sentiment Score</code></td>
+<td>KPI</td>
+<td>Positive minus negative sentiment balance</td>
+</tr>
+<tr>
+<td>17</td>
+<td><code>State Engagement Rank</code></td>
+<td>Ranking</td>
+<td>State ranking by total engagement (1 = highest)</td>
+</tr>
+<tr>
+<td>18</td>
+<td><code>Post Type Share of Engagement</code></td>
+<td>Advanced</td>
+<td>Percentage of total engagement by post type</td>
+</tr>
+<tr>
+<td>19</td>
+<td><code>Top Post Type</code></td>
+<td>Advanced</td>
+<td>Highest-performing content format</td>
+</tr>
+<tr>
+<td>20</td>
+<td><code>High Sentiment Engagement</code></td>
+<td>Advanced</td>
+<td>Avg engagement for above-average sentiment posts</td>
+</tr>
+<tr>
+<td>21</td>
+<td><code>Low Sentiment Engagement</code></td>
+<td>Advanced</td>
+<td>Avg engagement for below-average sentiment posts</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="complex-measure-explanations">Complex Measure Explanations</h3>
+<p>Three advanced measures are highlighted below to demonstrate DAX proficiency and business logic implementation.</p>
+<hr />
+<h4 id="1-top-post-type">1. Top Post Type</h4>
+<p><strong>Business Question:</strong> <em>Which content format drives the most engagement?</em></p>
+<p><strong>What it does:</strong><br />
+Identifies the single highest-performing content format (image, video, link, or text) based on total engagement.</p>
+<p><strong>How it works:</strong><br />
+The measure creates a virtual table grouping posts by type with their total engagement, selects the top performer, and returns it as readable text.</p>
+<p><strong>Functions Used:</strong> <code>VAR</code>, <code>TOPN</code>, <code>SUMMARIZE</code>, <code>CONCATENATEX</code></p>
+<p><strong>Key Techniques:</strong><br />
+Unlike a simple <code>MAXX</code> which only returns a number, this measure returns the actual category name (e.g., "Video") in a stakeholder-friendly format. It demonstrates the ability to combine multiple DAX functions to produce dynamic, readable outputs.</p>
+<p><strong>Business Value:</strong><br />
+Directly answers <em>"What type of content should we create more of?"</em> Enables data-driven content strategy and resource allocation.</p>
+<hr />
+<h4 id="2-post-type-share-of-engagement">2. Post Type Share of Engagement</h4>
+<p><strong>Business Question:</strong> <em>What percentage of total engagement does each content format contribute?</em></p>
+<p><strong>What it does:</strong><br />
+Calculates the percentage contribution of each content type to total engagement.</p>
+<p><strong>How it works:</strong><br />
+The measure first calculates total engagement across all post types (ignoring any filters), then divides the current post type's engagement by that total.</p>
+<p><strong>Functions Used:</strong> <code>CALCULATE</code>, <code>ALL</code>, <code>DIVIDE</code></p>
+<p><strong>Key Techniques:</strong><br />
+Demonstrates the essential <code>CALCULATE</code> + <code>ALL</code> pattern required for percentage-of-total calculations. This pattern is fundamental to portfolio analysis and is widely used in enterprise BI solutions.</p>
+<p><strong>Business Value:</strong><br />
+Reveals engagement concentration—for example, if videos drive 60% of engagement but only represent 20% of posts. Helps balance content strategy and identify over-reliance on specific formats.</p>
+<hr />
+<h4 id="3-low-sentiment-engagement">3. Low Sentiment Engagement</h4>
+<p><strong>Business Question:</strong> <em>Does below-average positive sentiment hurt engagement performance?</em></p>
+<p><strong>What it does:</strong><br />
+Measures average engagement specifically for posts with below-average positive sentiment.</p>
+<p><strong>How it works:</strong><br />
+The measure dynamically determines the average positive sentiment score, then filters the fact table to include only posts scoring at or below that threshold, finally calculating average engagement for this subset.</p>
+<p><strong>Functions Used:</strong> <code>CALCULATE</code>, <code>FILTER</code></p>
+<p><strong>Key Techniques:</strong><br />
+Uses the <code>CALCULATE</code> + <code>FILTER</code> pattern to enable dynamic conditional analysis. When paired with <code>High Sentiment Engagement</code> (which filters for above-average sentiment), it creates a true A/B test comparing performance across sentiment groups.</p>
+<p><strong>Business Value:</strong><br />
+Answers the critical question <em>"Does positive content actually drive higher engagement?"</em> Quantifies the ROI of maintaining positive brand tone and provides data-backed justification for content guidelines.</p>
+<hr />
+<h4 id="contributors">Contributors:</h4>
+<p><strong>Vivian Kipsang -</strong> </p>
+<p><strong>Misati Nyambane-</strong></p>
+<p><strong>Trizah Nzioka-</strong></p>
+<p><strong>Samantha Masaki-</strong></p>
+<p><strong>Levin Ekuam-</strong></p>
+<p><strong>Ilham Mohammed-</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 DSA3050 SS26 USIU - Africa All rights reserved.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.expand", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
