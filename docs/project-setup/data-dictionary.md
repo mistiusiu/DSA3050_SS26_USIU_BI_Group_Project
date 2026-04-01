@@ -1,0 +1,2 @@
+This provides a detailed description of all variables used in the Social Media Engagement dataset obtained from Kaggle. The purpose of this data dictionary is to enhance data understanding, ensure consistency and support effective analysis within Power BI.
+The dataset captures social media performance using engagement metrics, temporal variables, audience characteristics, content attributes, sentiment scores and linguistic features derived from LWIC analysis.
