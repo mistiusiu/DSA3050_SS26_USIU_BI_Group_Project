@@ -7,14 +7,18 @@ While variables such as likes, retweets, replies and follower counts quantify ob
 
 These models allow analysts to move beyond surface level metrics and examine how language itself shapes audience perception, interaction and behavioral response. The data dictionary therefore plays a critical role in translating these complex variables into meaningful interpretations that can be applied within Power BI for reporting and decision making.
 
-## The Psychological Process Model
+**The Psychological Process Model**
 
 The psychological process model captures the emotional and cognitive dimensions of language, focusing on how individuals express feelings and thoughts within social media content. Variables such as *affect*, *emotion*, *positive emotion* and *negative emotion* quantify the intensity and polarity of emotional expression, enabling analysts to distinguish between content that evokes positive reactions, such as 3, 2 and 1 and content that conveys negativity, such as -3, -2 or -1. *Cognition* extends this analysis by measuring the degree of analytical thinking present in the text, reflecting the use of reasoning, problem solving and intellectual framing.
 
 This model is particularly valuable in understanding the balance between emotional appeal and rational communication, as highly emotional posts may drive immediate engagement, while cognitively rich posts may foster deeper audience reflection and long term value. By interpreting these variables collectively, analysts can identify whether emotional resonance or intellectual depth is more effective in influencing engagement outcomes.
 
-## The Social Language Model
+**The Social Language Model**
 
 The social language model examines how language reflects interpersonal relationships and social orientation, primarily through the use of pronouns. Variables such as *we percentage*, *I percentage* and *they percentage* provide insight into whether content is framed collectively, personally or externally. A higher use of (we) indicates inclusive and community oriented messaging, which can strengthen audience connection and foster a sense of belonging. A higher (I) percentage reflects a personal or individualistic tone, often associated with storytelling, personal experiences or influencer driven content. The use of (they) suggests a focus on external groups or third parties which may introduce elements of comparison, distinction or even criticism.
 
 This model is essential for understanding how linguistic framing influences audience engagement as different social orientations can evoke varying emotional and behavioral responses. For instance, inclusive language may enhance trust and loyalty while personal narratives may increase relatability and authenticity.
+
+
+
+
