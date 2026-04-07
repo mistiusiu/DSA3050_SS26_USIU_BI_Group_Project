@@ -65,13 +65,40 @@ Findings:
 - Pre-Covid Phase (Mar 2019 – Mar 2020) Engagement started relatively low but showed an early spike around Jul 2019 for Celebrities (~400), suggesting an active pre-pandemic digital environment. All influencer tiers maintained steady but modest engagement levels during this period.
 - Covid Lockdown (Mar 2020 – Jun 2020) Celebrity engagement spiked dramatically to ~575 around Jan 2020 just before lockdown, then experienced the most volatile period in the entire timeline. The biggest spike in the entire dataset occurs around Jul 2020 (~725) — right at the start of Post Lockdown — confirming that lockdown created extraordinary engagement opportunities for Celebrities.
 - Unlocking (Jun 2020 – Jan 2021) Engagement remained elevated but began fluctuating significantly. Celebrities continued dominating while Macro Influencers showed a gradual upward trend, slowly closing the gap.
-- Post Lockdown (Jan 2021 – Jan 2022) Celebrity engagement gradually declined from its pandemic peak but stabilised at a higher level than pre-COVID. Macro Influencers continued their upward trajectory, reaching their highest levels during this phase.
+- Post Lockdown (Jan 2021 – Jan 2022) Celebrity engagement gradually declined from its pandemic peak but stabilised at a higher level than pre-COVID. Macro Influencers continued their upward trajectory, reaching their highest levels during this phase. Macro Influencers show a clear upward trend, while Micro and Nano Influencers remain relatively flat, indicating that the pandemic's impact on engagement was most pronounced for higher-tier influencers.
 
 ## Content Performance
 
 a) Business Question – Which post type generates the highest engagement?
 
 ![alt text](image-11.png)
+
+Findings:
+Celebrity
+- Video has the highest engagement    
+- Photo is second
+- Interaction content outperforms Information  across most post types
+
+Macro Influencer
+- Video also dominates 
+- Photo and Text are strong second options
+- Similar pattern to Celebrities — Interaction content leads
+
+Micro Influencer
+- Video again leads 
+- Much lower overall compared to Celebrity and Macro
+- Same Interaction > Information pattern holds
+
+Nano Influencer
+- Engagement is very low across all post types
+- No single post type clearly dominates
+- Barely registers compared to other tiers
+
+b) Business question - Does verbosity impact engagement levels on content type?
+
+
+
+
 
 
 
