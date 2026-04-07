@@ -27,6 +27,18 @@ It suggests 2 things:
 - Massive follower reach in these specific states is highly dependent on "Celebrity" status rather than a broad base of smaller creators.
 - High-follower influence is not evenly distributed across the map; instead, it is geographically concentrated, with these three states acting as the primary hubs for the most followed influencers in our dataset.
 
+## Engagement Over Time
+
+a) Business Question – How does influencer status affect engagement across phases?
+ ![alt text](image-8.png)
+
+For this chart, we are looking at the engagement across the 4 COVID-19 phases and how it affects each influencer type.
+ 
+Findings: 
+-	Celebrities: We can see that they are in a league of their own. This is because they lead in every single phase. When everyone was stuck at home, their content was a go-to for most people. Their lowest was pre-COVID, which is still higher than almost anyone else's peak.
+-	Macro Influencers: They mirror the celebrities but on a smaller scale. Their performance peaked during the Unlocking phase, suggesting their content resonated most as people began transitioning back to normal life.
+-	Micro Influencers: They saw their best results in the Post-Lockdown Period, which indicates that their engagement wasn’t tied to a global crisis; instead, it grew as people settled back into their post-pandemic routines.
+-	Nano-Influencer: They occupy the smallest area on the chart. While they saw a relatively high level during the COVID lockdown, their engagement dropped to its lowest point during the Unlocking phase.
 
 
 
