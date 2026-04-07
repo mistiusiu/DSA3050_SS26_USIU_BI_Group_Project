@@ -96,6 +96,40 @@ Nano Influencer
 
 b) Business question - Does verbosity impact engagement levels on content type?
 
+![alt text](image-12.png)
+
+Findings:
+-	Medium verbosity drives the highest overall engagement regardless of content type
+-	Interaction content is more resilient — it performs consistently well across all verbosity levels, never dropping as sharply as Information 
+-	Information content is most vulnerable at High verbosity — it drops significantly, suggesting audiences disengage from purely informational content when verbosity is high but not extreme
+-	At Low verbosity, Information slightly outperforms Interaction — the only level where this reversal occurs
+If you want consistent engagement, Interaction content is the safer bet across all verbosity levels. Information content is more volatile — it peaks at Medium and Low but struggles at High verbosity.
+
+## Posting Behaviour
+a) Business Question – Does Verbosity affect engagement differently by influencer type?
+
+![alt text](image-13.png)
+
+For this chart, we look at how much influencer posts vs how much their audience interacts. We used Average Engagement scores to make our comparisons fair, regardless of how much each person posts. 
+
+Finding: 
+-	Celebrities: They don’t need to say much on their social media, hence why their highest engagement is at “Low”, hitting nearly 500 interactions. Interestingly, they completely disappear from the data entirely at the “Extreme” verbosity level, which suggests their audience prefers short, quick updates.
+-	Micro-Influencers: They have to work harder, end up seeing an opposite trend where their engagement is low for short posts but takes the lead at “Extreme” verbosity. 
+-	Macro-Influencers: They have a middle ground where they perform consistently well but peak when they provide a moderate amount of content, nearly catching up to celebrities at the “Medium” level.
+-	Nano-Influencer: Their engagement levels remain low across the board, showing very little change, no matter how much they write. 
+
+b) Business Question – Does word count influence engagement levels?
+
+![alt text](image-14.png)
+
+This scatter plot maps out every post by its word count versus the engagement it received. If writing more led to more likes, we would see the dots trending upward as we move to the right. 
+
+Findings:
+-	Celebrities "break" the chart at low word counts. The highest engagement spikes in the entire study happen when Celebrities say very little, usually under 50 words. 
+-	The "Long-Form" flatline. As we move toward the higher word counts (100–200 words), engagement stays remarkably flat for everyone else. 
+-	Micro and Nano influencers stay grounded. Regardless of how much they write, these tiers cluster near the bottom of the engagement scale, showing that word count isn't a "ladder" they can use to climb into higher engagement brackets.
+- There is no meaningful correlation between word count and engagement. The data proves that who is posting is far more important than how much they write. For celebrities, fame acts as an amplifier for even the smallest amount of effort. For smaller influencers, writing longer posts doesn't compensate for a smaller reach.
+
 
 
 
