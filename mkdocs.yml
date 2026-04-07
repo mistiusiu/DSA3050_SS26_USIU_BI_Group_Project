@@ -1,0 +1,58 @@
+site_name: Social Media Sentiment BI Analytics
+site_url: https://mistiusiu.github.io/DSA3050_SS26_USIU_BI_Group_Project/
+theme:
+  name: material
+  palette:
+    primary: indigo
+    accent: indigo
+  logo: assets/usiu-logo.png
+  favicon: assets/usiu-logo.png
+  features:
+    - navigation.expand
+    - navigation.indexes       # Clickable section headers
+    - navigation.top           # "Back to top" button
+    - toc.follow 
+    - content.code.copy
+
+extra_css:
+  - stylesheets/extra-minimal.css
+
+markdown_extensions:
+  # as before
+  - attr_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.tasklist
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      title: "CONTENTS"
+
+extra:
+  generator: false
+
+nav:
+  - Home: index.md
+  - Project Definition:
+      - Problem Statement: project-setup/problem-statement.md
+      - Data Dictionary: project-setup/data-dictionary.md
+  - ETL & Power Query: power-query/transformations.md
+  - Data Architecture: data-modeling/star-schema.md
+  - DAX Calculations:
+      - Measures Library: dax-development/measures.md
+      - Advanced Logic: dax-development/logic-deep-dive.md
+  - Insights & Visuals:
+      - Design Strategy: dashboard/visuals-design.md
+      - Business Insights: dashboard/insights.md
+  - Final Delivery: deployment/service-links.md
+
+copyright: Copyright &copy; 2026 DSA3050 SS26 USIU - Africa
