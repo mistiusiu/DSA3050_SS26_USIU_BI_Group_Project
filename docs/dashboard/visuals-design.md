@@ -1,15 +1,24 @@
-We're going to take you through a data-driven look at influencer engagement on social media, covering everything from how the pandemic reshaped online behaviour, to what actually makes content perform. We analyzed four types of influencers: Nano, Micro, Macro, and Celebrities, and what we found challenges a lot of assumptions about who wins on social media and why.
+We're going to look at influencer engagement on social media, covering everything from how the pandemic reshaped online behaviour, to what actually makes content perform. We'll dive into the data to uncover insights about which influencer segments are most active, what content formats resonate best, and how engagement trends evolved across different phases of the pandemic.
 
-# Visuals Design
+# Visuals Design's
 
 Business Question – What post type do different segment influencers post?
 
 ![alt text](image-6.png)
- 
-Findings:
--	Photo dominates across all tiers. The dark blue segment is by far the largest for every influencer tier. It's not even close; photo posts make up the overwhelming majority of content regardless of influencer status.
--	Macro influencers post the most overall. Their bar extends to around 10K+ posts, making them the most prolific content creators in the dataset. This is the opposite of what the flawed chart suggested.
--	 Nano influencers post drastically less. Their bar barely reaches 200–300 posts and shows only two visible post types, Photo and Text. The difference in volume between Nano and Macro influencers is enormous, confirming that Nano influencers are far less active.
--	Video and Poll are negligible across all tiers. Those segments are barely visible even for the highest-volume tiers, suggesting these formats are rarely used regardless of influencer size.
--	Celebrity posts less than Macro and Micro Celebrities sit around 4K–5K posts, below both Macro and Micro influencers, which is counterintuitive and worth noting.
--	Overall, the data clearly shows that photo posts dominate across all influencer tiers, with Macro influencers posting the most content. Nano influencers are significantly less active, and video/poll formats are rarely used regardless of influencer status. This challenges assumptions about who is most active and what content types are most popular on social media.
+
+Key Findings:
+
+Photos dominate: Photos are the main content type for all influencer tiers at all times.
+Macro influencers lead: They post the most, peaking at nearly 4,000 posts after lockdown.
+Nano influencers lag: They post the least, rarely going above 200 posts.
+Pandemic drop: Posting decreased significantly during lockdown for all tiers.
+Strong recovery: Activity increased after lockdown, with Macro and Micro influencers surpassing pre-Covid levels.
+Micro vs Celebrity: Micro influencers post more than Celebrities, especially before and after lockdown.
+Other formats minimal: Only video stands out slightly; polls, links, and text are barely used.
+Consistent preference: Photo-first content stayed dominant regardless of global changes.
+
+
+
+
+
+
