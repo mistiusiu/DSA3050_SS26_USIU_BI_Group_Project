@@ -130,6 +130,54 @@ Findings:
 -	Micro and Nano influencers stay grounded. Regardless of how much they write, these tiers cluster near the bottom of the engagement scale, showing that word count isn't a "ladder" they can use to climb into higher engagement brackets.
 - There is no meaningful correlation between word count and engagement. The data proves that who is posting is far more important than how much they write. For celebrities, fame acts as an amplifier for even the smallest amount of effort. For smaller influencers, writing longer posts doesn't compensate for a smaller reach.
 
+## Timing & Geography
+
+a) Business Question – Which state have the highest post engagement?
+
+![alt text](image-15.png)
+
+Findings:
+- Maharashtra leads: It has the highest average engagement, driven by a strong presence of Celebrity influencers who generate significant interaction.
+- Tamil Nadu and Karnataka follow: These states also show high engagement levels, likely due to a combination of active influencer communities and engaged audiences.
+- Regional disparities: Engagement levels vary widely across states, suggesting that local factors such as population density, internet penetration, and cultural engagement with social media may play significant roles in driving interaction.
+- Celebrity influence: The states with the highest engagement are also those where Celebrity influencers are most active, reinforcing the idea that influencer presence is a key driver of engagement in these regions. 
+
+
+b) Business Question – Which day and hour has the highest engagement across phases?
+
+![alt text](image-16.png)
+
+Findings: 
+- Overall Pattern: Non-Working Hours consistently outperform Working Hours across every day and every phase. This confirms that people engage with content most during their personal time rather than work hours, regardless of the pandemic phase.
+- Friday Evening Peak: The single highest engagement hotspot is on Fridays during Non-Working Hours in  the Pre-Covid phase (346.45), making it the most active time for engagement in the entire dataset. This suggests that people were most engaged with content at the end of the workweek before the pandemic disrupted normal routines.                       
+- Saturday Non-Working Hours — Unlocking — second highest, suggesting weekend evenings during the return to normalcy were highly active
+- Thursday Working Hours — Unlocking (295.00) — surprisingly high for working hours, suggesting the Unlocking phase drove unusual weekday engagement
+- Covid Lockdown Pattern: The Covid Lockdown column is consistently the lightest across all days and hours hence confirming our earlier finding that lockdown suppressed engagement across the board regardless of day or time
+- Key Insight: Engagement follows human behaviour, people interact most with content during their personal time, not work hours. Friday evenings Pre-Covid represented the peak engagement window, while Covid Lockdown flattened all temporal patterns entirely, erasing the natural rhythm of online behaviour.
+
+## Sentiment Analysis
+
+a) Business Question – What sentiment do influencers express in their content? (Information)
+
+![alt text](image-17.png)
+
+For this chart, we were looking at what sentiment influencers actively express in their own content. The chart compares the average positive and negative sentiment scores across each influencer type, filtered to information-type posts only — that is, content created directly by the influencer.
+Findings:
+-	Negative expression is identical across all tiers. Every influencer type posts with exactly −1.06. Tier, reach, and fame have zero influence on how negatively influencers frame their content.
+-	Celebrities express the most positivity. At 1.35, Celebrities edge out all other tiers. Micro influencers express the least positivity at 1.24, with Macro and Nano tied at 1.25.
+-	 Positivity outweighs negativity for all tiers. Every tier sits net-positive, meaning that regardless of influencer status, content leans more positive than negative overall.
+- Insight: Influencer tier shapes how positively someone expresses themselves, but not how negatively. The negativity floor is universal — suggesting it reflects a general norm of content creation on the platform rather than individual influencer behaviour. Celebrities post the most positively, which may reflect more polished, brand-conscious content strategies rather than genuine differences in sentiment.
+
+b) Business Question - What sentiment do audiences direct back at influencers? (Interaction)
+
+![alt text](image-18.png)
+
+For this chart, we examined the sentiment audiences directed at influencers through comments and interactions. The chart compares the average positive and negative sentiment scores across each influencer type, filtered to interaction-type posts only.
+Findings: 
+-	Negativity is mostly flat, but Nano influencers attract slightly more Celebrities and Micro influencers receive −1.06, while Macro influencers receive the least negativity at −1.04. Nano influencers stand out slightly at −1.09, the highest negative reception of all tiers, which is unexpected given their smaller reach.
+-	 Celebrities and Nano influencers receive the most positivity equally. Both sit at 1.38, jointly leading the audience's positive reception. Micro influencers follow at 1.28, while Macro influencers receive the least positivity at 1.22.
+-	 Macro influencers have the weakest audience reception overall. They receive the least positivity and the least negativity — suggesting their audiences are the most emotionally neutral or disengaged in their responses.
+Insight: Unlike expression, reception does vary more noticeably across tiers. The most striking finding is that Nano influencers — despite the smallest reach — attract audience sentiment comparable to Celebrities. This suggests that community closeness at the Nano level drives stronger emotional reactions, both positive and negative, than the middle tiers
 
 
 
