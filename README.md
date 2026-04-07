@@ -115,99 +115,42 @@ These dimension tables provide descriptive context that allows engagement metric
 
 ### Overview
 
-We developed a total of **21 DAX measures** to support the business questions. Measures are organized by functional category and stored in a dedicated `_Measures` table for clean model organization.
+We developed a total of **19 DAX measures** to support the business questions. Measures are organized by functional category and stored in a dedicated `_Measures` table for clean model organization.
 
 ---
 
 ### Complete Measures List
 
-| # | Measure Name | Category | Description |
-|---|--------------|----------|-------------|
-| 1 | `Total Posts` | Aggregation | Count of all published posts |
-| 2 | `Total Likes` | Aggregation | Sum of all likes received |
-| 3 | `Total Retweets` | Aggregation | Sum of all retweets/shares |
-| 4 | `Total Engagement` | Aggregation | Sum of all engagement actions (likes + retweets + replies + quotes) |
-| 5 | `Avg Engagement per Post` | Aggregation | Average engagement per post |
-| 6 | `Avg Engagement by Post Type` | Aggregation | Average engagement grouped by content format |
-| 7 | `Avg Engagement by Day` | Aggregation | Average engagement grouped by day of week |
-| 8 | `Avg Positive Sentiment` | Aggregation | Average positive sentiment score |
-| 9 | `Avg Negative Sentiment` | Aggregation | Average negative sentiment score |
-| 10 | `Engagement YTD` | Time Intelligence | Year-to-date total engagement |
-| 11 | `Engagement MTD` | Time Intelligence | Month-to-date total engagement |
-| 12 | `Engagement YoY % Change` | Percentage Change | Year-over-year growth rate |
-| 13 | `Engagement QoQ % Change` | Percentage Change | Quarter-over-quarter growth rate |
-| 14 | `Engagement Growth Trend` | KPI | Change in growth rate (acceleration/deceleration) |
-| 15 | `Engagement Rate` | KPI | Engagement per 1,000 followers |
-| 16 | `Net Sentiment Score` | KPI | Positive minus negative sentiment balance |
-| 17 | `State Engagement Rank` | Ranking | State ranking by total engagement (1 = highest) |
-| 18 | `Post Type Share of Engagement` | Advanced | Percentage of total engagement by post type |
-| 19 | `Top Post Type` | Advanced | Highest-performing content format |
-| 20 | `High Sentiment Engagement` | Advanced | Avg engagement for above-average sentiment posts |
-| 21 | `Low Sentiment Engagement` | Advanced | Avg engagement for below-average sentiment posts |
+# DAX Measures Summary
+
+This model includes DAX measures to track social media engagement and sentiment. Measures are organized by category for reporting and decision-making.
+
+| #  | Measure Name                   | Category           | Description                                                     |
+|----|--------------------------------|------------------|-----------------------------------------------------------------|
+| 1  | Total Posts                     | Aggregation       | Count of all published posts                                     |
+| 2  | Total Likes                     | Aggregation       | Sum of all likes received                                        |
+| 3  | Total Retweets                  | Aggregation       | Sum of all retweets/shares                                       |
+| 4  | Total Engagement                | Aggregation       | Sum of all engagement actions (likes + retweets + replies + quotes) |
+| 5  | Avg Engagement per Post         | Aggregation       | Average engagement per post                                       |
+| 6  | Avg Engagement                  | Aggregation       | Average engagement across all posts                               |
+| 7  | Avg Positive Sentiment          | Aggregation       | Average positive sentiment score                                   |
+| 8  | Avg Negative Sentiment          | Aggregation       | Average negative sentiment score                                   |
+| 9  | Engagement MTD                  | Time Intelligence | Month-to-date total engagement                                     |
+| 10 | Engagement YoY % Change         | Percentage Change | Year-over-year change in engagement                                 |
+| 11 | Engagement QoQ % Change         | Percentage Change | Quarter-over-quarter change in engagement                           |
+| 12 | Engagement Growth Trend         | KPI               | Change in engagement growth rate                                     |
+| 13 | Engagement Rate                 | KPI               | Engagement per follower                                             |
+| 14 | Net Sentiment Score             | KPI               | Positive minus negative sentiment balance                           |
+| 15 | State Engagement Rank           | Ranking           | Rank of states by total engagement                                  |
+| 16 | Post Type Share of Engagement   | Advanced          | Percentage of total engagement by post type                          |
+| 17 | Top Post Type                   | Advanced          | Highest-performing content format                                    |
+| 18 | High Positive Sentiment Engagement | Advanced      | Avg engagement for above-average positive sentiment posts           |
+| 19 | Low Positive Sentiment Engagement  | Advanced      | Avg engagement for below-average positive sentiment posts           |
 
 ---
 
-### Complex Measure Explanations
 
-Three advanced measures are highlighted below to demonstrate DAX proficiency and business logic implementation.
 
----
-
-#### 1. Top Post Type
-
-**Business Question:** *Which content format drives the most engagement?*
-
-**What it does:**  
-Identifies the single highest-performing content format (image, video, link, or text) based on total engagement.
-
-**How it works:**  
-The measure creates a virtual table grouping posts by type with their total engagement, selects the top performer, and returns it as readable text.
-
-**Functions Used:** `VAR`, `TOPN`, `SUMMARIZE`, `CONCATENATEX`
-
-**Key Techniques:**  
-Unlike a simple `MAXX` which only returns a number, this measure returns the actual category name (e.g., "Video") in a stakeholder-friendly format. It demonstrates the ability to combine multiple DAX functions to produce dynamic, readable outputs.
-
-**Business Value:**  
-Directly answers *"What type of content should we create more of?"* Enables data-driven content strategy and resource allocation.
-
----
-
-#### 2. Post Type Share of Engagement
-**Business Question:** *What percentage of total engagement does each content format contribute?*
-
-**What it does:**  
-Calculates the percentage contribution of each content type to total engagement.
-
-**How it works:**  
-The measure first calculates total engagement across all post types (ignoring any filters), then divides the current post type's engagement by that total.
-
-**Functions Used:** `CALCULATE`, `ALL`, `DIVIDE`
-
-**Key Techniques:**  
-Demonstrates the essential `CALCULATE` + `ALL` pattern required for percentage-of-total calculations. This pattern is fundamental to portfolio analysis and is widely used in enterprise BI solutions.
-
-**Business Value:**  
-Reveals engagement concentration—for example, if videos drive 60% of engagement but only represent 20% of posts. Helps balance content strategy and identify over-reliance on specific formats.
-
----
-
-#### 3. Low Sentiment Engagement
-**Business Question:** *Does below-average positive sentiment hurt engagement performance?*
-
-**What it does:**  
-Measures average engagement specifically for posts with below-average positive sentiment.
-
-**How it works:**  
-The measure dynamically determines the average positive sentiment score, then filters the fact table to include only posts scoring at or below that threshold, finally calculating average engagement for this subset.
-
-**Functions Used:** `CALCULATE`, `FILTER`
-
-**Key Techniques:**  
-Uses the `CALCULATE` + `FILTER` pattern to enable dynamic conditional analysis. When paired with `High Sentiment Engagement` (which filters for above-average sentiment), it creates a true A/B test comparing performance across sentiment groups.
-
-**Business Value:**  
-Answers the critical question *"Does positive content actually drive higher engagement?"* Quantifies the ROI of maintaining positive brand tone and provides data-backed justification for content guidelines.
 
 
 ---
