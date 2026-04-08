@@ -171,8 +171,9 @@ Insights: What makes these states unique in the data is that their high average 
 
 ### Findings
 
-- Massive follower reach in these specific states is highly dependent on "Celebrity" status rather than a broad base of smaller creators.
-- High-follower influence is not evenly distributed across the map; instead, it is geographically concentrated, with these three states acting as the primary hubs for the most followed influencers in our dataset.
+Massive follower reach in these specific states is highly dependent on "Celebrity" status rather than a broad base of smaller creators.
+
+High-follower influence is not evenly distributed across the map; instead, it is geographically concentrated, with these three states acting as the primary hubs for the most followed influencers in our dataset.
 
 ##  How does Influencer Status affect Engagement across Phases?
 
