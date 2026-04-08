@@ -154,7 +154,7 @@ This grouped bar chart cross-analyses Average Engagement by both Post Type and V
 
 ## What Post Type do Different Segment Influencers Post?
 
-![alt text](<../assets/post_Type by influencer.png>)
+![alt text](../assets/post_Type by influencer.png)
 
 ### Findings
 
@@ -201,7 +201,7 @@ For this chart, we are looking at the engagement across the 4 COVID-19 phases an
 
 ## How did Engagement Patterns Change across COVID Phases?
 
-![alt text](<../assets/Box - PLot.png>)
+![alt text](../assets/Box - PLot.png)
 
 ### Findings
 
@@ -304,7 +304,7 @@ There is no meaningful correlation between word count and engagement. The data p
 
 ## Which States have the Highest Engagement?
 
-![alt text](<Engagement (State).png>)
+![alt text](../assets/engagment_state.png)
 
 ### Findings
 
@@ -319,7 +319,7 @@ There is no meaningful correlation between word count and engagement. The data p
 
 ## Which Day and Hour has the Highest Engagement across Phases?
 
-![alt text](<Engagement ( Day  Hour).png>)
+![alt text](../assets/engagement_day_hour.png)
 
 ### Findings
 
@@ -339,7 +339,7 @@ There is no meaningful correlation between word count and engagement. The data p
 
 For this chart, we were looking at what sentiment influencers actively express in their own content. The chart compares the average positive and negative sentiment scores across each influencer type, filtered to information-type posts only — that is, content created directly by the influencer.
 
-![alt text](<Sentiment (Influencers).png>)
+![alt text](../assets/sentiment_influencers.png)
 
 ### Findings
 
@@ -355,7 +355,7 @@ Influencer tier shapes how positively someone expresses themselves, but not how 
 
 For this chart, we examined the sentiment audiences directed at influencers through comments and interactions. The chart compares the average positive and negative sentiment scores across each influencer type, filtered to interaction-type posts only.
 
-![alt text](<Sentiment (Audience).png>)
+![alt text](../assets/sentiment_audience.png)
 
 ### Findings 
 
