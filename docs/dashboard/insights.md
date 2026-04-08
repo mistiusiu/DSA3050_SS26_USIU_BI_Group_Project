@@ -287,7 +287,7 @@ There is no meaningful correlation between word count and engagement. The data p
 
 For this chart, we were looking at what sentiment influencers actively express in their own content. The chart compares the average positive and negative sentiment scores across each influencer type, filtered to information-type posts only — that is, content created directly by the influencer.
 
-![alt text](image-17.png)
+![alt text](<Sentiment (Influencers).png>)
 
 ### Findings
 
