@@ -252,7 +252,7 @@ There is no meaningful correlation between word count and engagement. The data p
 
 ## Which States have the Highest Engagement?
 
-![alt text](image-15.png)
+![alt text](<Engagement (State).png>)
 
 ### Findings
 
