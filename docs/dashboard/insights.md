@@ -305,7 +305,7 @@ There is no meaningful correlation between word count and engagement. The data p
 
 ## Which States have the Highest Engagement?
 
-![alt text](image-15.png)
+![alt text](<Engagement (State).png>)
 
 ### Findings
 
@@ -320,7 +320,7 @@ There is no meaningful correlation between word count and engagement. The data p
 
 ## Which Day and Hour has the Highest Engagement across Phases?
 
-![alt text](image-16.png)
+![alt text](<Engagement ( Day  Hour).png>)
 
 ### Findings
 
@@ -340,7 +340,7 @@ There is no meaningful correlation between word count and engagement. The data p
 
 For this chart, we were looking at what sentiment influencers actively express in their own content. The chart compares the average positive and negative sentiment scores across each influencer type, filtered to information-type posts only — that is, content created directly by the influencer.
 
-![alt text](image-17.png)
+![alt text](<Sentiment (Influencers).png>)
 
 ### Findings
 
@@ -356,7 +356,7 @@ Influencer tier shapes how positively someone expresses themselves, but not how 
 
 For this chart, we examined the sentiment audiences directed at influencers through comments and interactions. The chart compares the average positive and negative sentiment scores across each influencer type, filtered to interaction-type posts only.
 
-![alt text](image-18.png)
+![alt text](<Sentiment (Audience).png>)
 
 ### Findings 
 
