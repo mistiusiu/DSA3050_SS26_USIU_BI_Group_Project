@@ -19,6 +19,6 @@ The conflict and interaction model captures the presence of tension, disagreemen
 
 The sentiment model provides a consolidated measure of the overall emotional tone of content, simplifying complex linguistic patterns into interpretable scores. Variables such as positive sentiment, negative sentiment, and total sentiment summarize the emotional direction and intensity of text, offering a high-level view of how content is likely to be perceived by audiences.The more granular emotional variables in the psychological process model, sentiment scores aggregate multiple dimensions of language into a single metric, making them particularly useful for comparative analysis and dashboard visualization in Power BI. Positive sentiment typically indicates favorable reception and alignment with audience expectations, while negative sentiment may signal dissatisfaction or controversy. Total sentiment provides a net measure, balancing positive and negative influences to give an overall assessment of tone. This model is essential for quickly identifying trends, benchmarking performance and guiding strategic decisions related to content creation and audience engagement.
 
-![alt text](image.png)
+![Data Dictionary Screenshot 1](image.png)
 
-![alt text](image-1.png)
+![Data Dictionary Screenshot 2](image-1.png)

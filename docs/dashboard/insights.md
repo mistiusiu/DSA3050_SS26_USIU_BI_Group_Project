@@ -4,7 +4,7 @@
 
 This line chart tracks the Engagement Growth Trend across 2020–2022. It plots the period-over-period change rate, revealing where growth accelerated or declined.
 
-![alt text](../assets/Line_Chart.png)
+![How has Engagement Grown over Time by Year and Month?](../assets/Line_Chart.png)
 
  
 ### Findings
@@ -22,7 +22,7 @@ around –4, aligns with peak lockdown fatigue. Even as audiences were home and 
 
 This pie chart breaks down the total sum of Positive Sentiment by Post Type, showing which content formats collectively generate the most positive audience response.
 
-![alt text](../assets/Pie_Chart.png)
+![How is Positive Sentiment Distributed across Post Types?](../assets/Pie_Chart.png)
 
 ### Findings
 
@@ -39,7 +39,7 @@ This pie chart breaks down the total sum of Positive Sentiment by Post Type, sho
 This bar chart compares the Average of Engagement across five post types: Text, Video, Photo, Link, and Poll; giving a fair, volume-neutral comparison of which format resonates most per post.
 
 
-![alt text](../assets/Bar_Chart.png)
+![Which Post Type Generates the Highest Engagement?](../assets/Bar_Chart.png)
 
 ### Findings
 
@@ -59,7 +59,7 @@ This bar chart compares the Average of Engagement across five post types: Text, 
 This pie chart breaks down the total sum of Positive Sentiment by Post Type, showing which content formats collectively generate the most positive audience response.
 
 
-![alt text](../assets/Pie_Chart.png)
+![How is Positive Sentiment Distributed across Post Types?](../assets/Pie_Chart.png)
 
 ### Findings
 
@@ -76,7 +76,7 @@ This pie chart breaks down the total sum of Positive Sentiment by Post Type, sho
 This bar chart compares the Average of Engagement across five post types, Text, Video, Photo, Link, and Poll, giving a fair, volume-neutral comparison of which format resonates most per post.
 
 
-![alt text](../assets/Bar_Chart.png)
+![Which Post Type Generates the Highest Engagement?](../assets/Bar_Chart.png)
 
 
 ### Findings
@@ -96,7 +96,7 @@ This bar chart compares the Average of Engagement across five post types, Text, 
 
 This Power BI Key Influencers visual identifies the conditions under which a post is most likely to be a Photo post, quantifying each factor's multiplicative impact on that likelihood.
 
-![alt text](../assets/Key_Influencers.png)
+![What Factors most Influence the Likelihood of a Post being Classified as a Photo Post?](../assets/Key_Influencers.png)
  
 ### Findings
 
@@ -110,7 +110,7 @@ This Power BI Key Influencers visual identifies the conditions under which a pos
 
 This chart compares Total Engagement for Information and Interaction content types across different influencer groups.
 
-![alt text](../assets/Horizontal_Bar_Chart.png)
+![How does Total Engagement compare Across Content Types for Different Influencer Tiers?](../assets/Horizontal_Bar_Chart.png)
 
 
 ### Findings
@@ -123,14 +123,13 @@ This chart compares Total Engagement for Information and Interaction content typ
 
 **Celebrity advantage is format-dependent:** Celebrities do not simply outperform across the board, their lead is most pronounced in Interaction content, suggesting their audiences engage most when the content invites a response rather than delivers information.
 
- 
-## How does Verbosity Interact with Post Type to affect Engagement?
 
+## How does Verbosity Interact with Post Type to affect Engagement?
 
 This grouped bar chart cross-analyses Average Engagement by both Post Type and Verbosity level (Extreme, High, Low, Medium), revealing whether the optimal word count varies by the type of post being created.
 
 
-![alt text](../assets/Verbosity.png)
+![How does Verbosity Interact with Post Type to affect Engagement?](../assets/Verbosity.png)
 
 ### Findings
 
@@ -146,7 +145,7 @@ This grouped bar chart cross-analyses Average Engagement by both Post Type and V
 
 ## What Post Type do Different Segment Influencers Post?
 
-![alt text](../assets/post_Type by influencer.png)
+![What Post Type do Different Segment Influencers Post?](../assets/post_Type by influencer.png)
 
 ### Findings
 
@@ -168,7 +167,7 @@ This grouped bar chart cross-analyses Average Engagement by both Post Type and V
 For this chart, we look at which regions drive the highest follower count; three states stand out: Kerala, Gujarat, and Odisha.
 Insights: What makes these states unique in the data is that their high average follower counts are driven exclusively by Celebrity influencers. We don’t see a mix of smaller tiers reaching these numbers in these regions.
 
-![alt text](../assets/StatesFollowers.png)
+![Which States have Socialites the Highest Number of Followers?](../assets/StatesFollowers.png)
 
 ### Findings
 
@@ -177,7 +176,7 @@ Insights: What makes these states unique in the data is that their high average 
 
 ##  How does Influencer Status affect Engagement across Phases?
 
-![alt text](../assets/InfStatusEng.png)
+![How does Influencer Status affect Engagement across Phases?](../assets/InfStatusEng.png)
 
 For this chart, we are looking at the engagement across the 4 COVID-19 phases and how it affects each influencer type.
 
@@ -193,7 +192,7 @@ For this chart, we are looking at the engagement across the 4 COVID-19 phases an
 
 ## How did Engagement Patterns Change across COVID Phases?
 
-![alt text](../assets/Box - PLot.png)
+![How did Engagement Patterns Change across COVID Phases?](../assets/Box - PLot.png)
 
 ### Findings
 
@@ -207,7 +206,7 @@ For this chart, we are looking at the engagement across the 4 COVID-19 phases an
 
 ## How do Engagement Levels Change over Time?
 
-![alt text](../assets/EngOverTime.png)
+![How do Engagement Levels Change over Time?](../assets/EngOverTime.png)
 
 ### Findings 
 
@@ -221,7 +220,7 @@ For this chart, we are looking at the engagement across the 4 COVID-19 phases an
 
 ## Which Post Type Generates the Highest Engagement?
 
-![alt text](../assets/PostTypeEng.png)
+![Which Post Type Generates the Highest Engagement?](../assets/PostTypeEng.png)
 
 ### Findings
 
@@ -251,7 +250,8 @@ For nano influencers:
 
 ## Does Verbosity Impact Engagement Levels on Content Type?
 
-![alt text](../assets/Verbosity.png)
+![Does Verbosity Impact Engagement Levels on Content Type?](../assets/Verbosity.png)
+
 ### Findings
 
 Medium verbosity drives the highest overall engagement regardless of content type
@@ -268,7 +268,7 @@ If you want consistent engagement, Interaction content is the safer bet across a
 
 For this chart, we look at how much influencer posts vs how much their audience interacts. We used Average Engagement scores to make our comparisons fair, regardless of how much each person posts. 
 
-![alt text](../assets/VerbEng.png)
+![Does Verbosity affect Engagement Differently by Influencer Type?](../assets/VerbEng.png)
 
 ### Findings
 
@@ -284,7 +284,7 @@ For this chart, we look at how much influencer posts vs how much their audience 
 
 This scatter plot maps out every post by its word count versus the engagement it received. If writing more led to more likes, we would see the dots trending upward as we move to the right. 
 
-![alt text](../assets/WordENg.png)
+![Does Word Count Influence Engagement Levels?](../assets/WordENg.png)
 
 ### Findings
 
@@ -296,7 +296,7 @@ There is no meaningful correlation between word count and engagement. The data p
 
 ## Which States have the Highest Engagement?
 
-![alt text](../assets/engagment_state.png)
+![Which States have the Highest Engagement?](../assets/engagment_state.png)
 
 ### Findings
 
@@ -311,7 +311,7 @@ There is no meaningful correlation between word count and engagement. The data p
 
 ## Which Day and Hour has the Highest Engagement across Phases?
 
-![alt text](../assets/engagement_day_hour.png)
+![Which Day and Hour has the Highest Engagement across Phases?](../assets/engagement_day_hour.png)
 
 ### Findings
 
@@ -331,7 +331,7 @@ There is no meaningful correlation between word count and engagement. The data p
 
 For this chart, we were looking at what sentiment influencers actively express in their own content. The chart compares the average positive and negative sentiment scores across each influencer type, filtered to information-type posts only — that is, content created directly by the influencer.
 
-![alt text](../assets/sentiment_influencers.png)
+![What Sentiments do Influencers Express in their Content?](../assets/sentiment_influencers.png)
 
 ### Findings
 
@@ -347,7 +347,7 @@ Influencer tier shapes how positively someone expresses themselves, but not how 
 
 For this chart, we examined the sentiment audiences directed at influencers through comments and interactions. The chart compares the average positive and negative sentiment scores across each influencer type, filtered to interaction-type posts only.
 
-![alt text](../assets/sentiment_audience.png)
+![What Sentiment do Audiences Direct Back at Influencers?](../assets/sentiment_audience.png)
 
 ### Findings 
 
