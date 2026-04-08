@@ -4,8 +4,10 @@ A radar chart was chosen because it allows simultaneous comparison of multiple c
 ## Clustered Bar Chart — Verbosity vs engagement by influencer type
 A clustered bar chart was chosen because it allows direct side-by-side comparison of engagement levels across verbosity categories for each influencer tier. Grouping bars by verbosity level makes the trend within each tier immediately readable. A line chart could have worked but would imply continuity between verbosity levels which are categorical, not continuous.
 
-3a & 3b. Stacked Bar Chart — Sentiment expression and reception
+
+## Stacked Bar Chart — Sentiment expression and reception
 A diverging stacked bar chart was chosen because sentiment data is inherently bipolar — positive on one side, negative on the other. Anchoring both bars at zero makes it visually intuitive to compare the magnitude of positive versus negative sentiment simultaneously. Splitting into two charts (Information vs Interaction) was necessary to avoid conflating what influencers express with what audiences direct back at them, addressing the core analytical distinction your group member flagged.
+
 
 ## Clustered Bar Chart — Followers by state
 A clustered bar chart was chosen because it allows comparison of follower counts across multiple states while simultaneously showing the breakdown by influencer tier within each state. This makes it immediately visible that high follower counts in certain states are driven exclusively by Celebrity influencers rather than a broad mix of tiers.

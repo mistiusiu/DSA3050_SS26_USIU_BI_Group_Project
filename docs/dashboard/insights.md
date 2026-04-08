@@ -3,7 +3,7 @@
 ## Business Question – How has engagement grown over time by year and month?
 - This line chart tracks the Engagement Growth Trend across 2020–2022. It plots the period-over-period change rate, revealing where growth accelerated or declined.
   
-![alt text](image.png)
+![alt text](../assets/Line_Chart.png)
  
 ### Findings:
 
@@ -23,7 +23,7 @@
 ## Business Question – How is positive sentiment distributed across post types?
 - This pie chart breaks down the total sum of Positive Sentiment by Post Type, showing which content formats collectively generate the most positive audience response.
 
- ![alt text](image-1.png)
+![alt text](../assets/Pie_Chart.png)
 
 ### Findings:
 – Photo dominates overwhelmingly: With 78.45% (23K) of all positive sentiment, Photo posts are by far the most positively received content format. This aligns with the finding that photo is also the most frequently posted type across all influencer tiers.
@@ -42,7 +42,7 @@
 ## Business Question – Which post type generates the highest average engagement?
 - This bar chart compares the Average of Engagement across five post types — Text, Video, Photo, Link, and Poll — giving a fair, volume-neutral comparison of which format resonates most per post.
 
- ![alt text](image-2.png)
+![alt text](../assets/Bar_Chart.png)
 
 ### Findings:
 –	Text leads on average: Counterintuitively, Text posts register the highest average engagement (approximately 285), edging out Video in this view. This may be driven by a small number of high-performing text posts inflating the average, or by the fact that text posts from high-tier influencers skew the mean.
@@ -62,8 +62,7 @@
 #  Key Influencers Visual
 ## Business Question – What factors most influence the likelihood of a post being classified as a Photo post?
 This Power BI Key Influencers visual identifies the conditions under which a post is most likely to be a Photo post, quantifying each factor's multiplicative impact on that likelihood.
-
-![alt text](image-3.png)
+![alt text](../assets/Key_Influencers.png)
 
  
 ### Findings:
@@ -80,8 +79,7 @@ This Power BI Key Influencers visual identifies the conditions under which a pos
 ## Business Question – How does total engagement compare across content types for different influencer tiers?
 - This chart compares Total Engagement for Information and Interaction content types across different influencer groups.
 
- ![alt text](image-4.png)
-
+![alt text](../assets/Horizontal_Bar_Chart.png)
 ### Findings:
 –	Interaction content leads for both groups: Both Celebrity and Macro Influencer bars are longer for Interaction content than for Information content. This universally confirms that audience engagement is higher when content is interactive rather than purely informational — consistent with the verbosity and stacked column analyses.
 
@@ -99,7 +97,7 @@ This Power BI Key Influencers visual identifies the conditions under which a pos
 ## Business Question – How does verbosity interact with post type to affect average engagement?
 - This grouped bar chart cross-analyses Average Engagement by both Post Type and Verbosity level (Extreme, High, Low, Medium), revealing whether the optimal word count varies by the type of post being created.
 
- ![alt text](image-5.png)
+![alt text](../assets/Grouped_Bar_Chart.png)
 
 ### Findings:
 –	Text at Extreme verbosity peaks dramatically: The most striking finding is that Text posts at Extreme verbosity (purple bar) reach nearly 1,000 average engagement — far above any other combination in the chart. This is an outlier result suggesting that long-form text content, when it does break through, generates outsized engagement.
