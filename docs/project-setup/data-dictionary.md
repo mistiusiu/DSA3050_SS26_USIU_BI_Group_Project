@@ -1,6 +1,7 @@
 
 This provides a detailed description of all variables used in the Social Media Engagement dataset obtained from Kaggle. The purpose of this data dictionary is to enhance data understanding, ensure consistency and support effective analysis.
-
+![alt text](image.png)
+![alt text](image-1.png)
 The dataset captures social media performance using engagement metrics, temporal variables, audience characteristics, content attributes, sentiment scores and linguistic features derived from LIWC analysis.
 
 While variables such as likes, retweets, replies and follower counts quantify observable user interactions, they do not fully explain the underlying drivers of engagement. To address this gap the dataset incorporates LIWC based variables that model the psychological, emotional and communicative properties of text.
