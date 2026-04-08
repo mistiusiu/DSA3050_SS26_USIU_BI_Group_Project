@@ -90,70 +90,44 @@ And for `Open_Hours`:
 
 #### Fact Table Social Media Engagement
 
-![Fact Table Social Media Engagement Snippet 1](../assets/fact_social_media_1.png)
-
-![Fact Table Social Media Engagement Snippet 2](../assets/fact_social_media_2.png)
-
-![Fact Table Social Media Engagement Snippet 3](../assets/fact_social_media_3.png)
-
 ![Fact Table Social Media Engagement Power Query](../assets/fact_social_media_power_query.png)
 
 #### Dimension Table State
-
-![Dimension Table State](../assets/dim_state.png)
 
 ![Dimension Table State Power Query](../assets/dim_state_power_query.png)
 
 #### Dimension Table Post Type
 
-![Dimension Table Post Type](../assets/dim_post_type.png)
-
 ![Dimension Table Post Type Power Query](../assets/dim_post_type_power_query.png)
 
 #### Dimension Table Content Type
-
-![Dimension Table Content Type](../assets/dim_content_type.png)
 
 ![Dimension Table Content Type Power Query](../assets/dim_content_type_power_query.png)
 
 #### Dimension Table Phase
 
-![Dimension Table Phase](../assets/dim_phase.png)
-
 ![Dimension Table Phase Power Query](../assets/dim_phase_power_query.png)
 
 #### Dimension Table Open Hours
-
-![Dimension Table Open Hours](../assets/dim_open_hours.png)
 
 ![Dimension Table Open Hours Power Query](../assets/dim_open_hours_power_query.png)
 
 #### Dimension Table Date
 
-![Dimension Table Date](../assets/dim_date.png)
-
 ![Dimension Table Date Power Query](../assets/dim_date_power_query.png)
 
 #### Dimension Table Day Power Query
-
-![Dimension Table Day Power Query](../assets/dim_day.png)
 
 ![Dimension Table Day Power Query](../assets/dim_day_power_query.png)
 
 #### Dimension Table Day Type
 
-![Dimension Table Day Type](../assets/dim_day_type.png)
-
 ![Dimension Table Day Type Power Query](../assets/dim_day_type_power_query.png)
 
 #### Dimension Table Influencer Status
 
-![Dimension Table Influencer Status](../assets/dim_influencer_status.png)
-
 ![Dimension Table Influencer Status Power Query](../assets/dim_influencer_status_power_query.png)
 
 #### Dimension Table Verbosity
-
-![Dimension Table Verbosity](../assets/dim_verbosity.png)
 
 ![Dimension Table Verbosity Power Query](../assets/dim_verbosity_power_query.png)
