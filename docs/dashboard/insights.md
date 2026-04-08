@@ -2,6 +2,7 @@
 #  Line Chart
 ## Business Question – How has engagement grown over time by year and month?
 - This line chart tracks the Engagement Growth Trend across 2020–2022. It plots the period-over-period change rate, revealing where growth accelerated or declined.
+  
 ![alt text](image.png)
  
 ### Findings:
