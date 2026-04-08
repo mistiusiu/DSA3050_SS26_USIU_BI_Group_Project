@@ -1,4 +1,4 @@
-
+# Design Strategy
 
 ### Line Chart
 

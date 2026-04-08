@@ -1,61 +1,15 @@
-# Complex Measure Explanations
+# Advanced Logic
 
-Three advanced measures are highlighted below to demonstrate DAX proficiency and business logic implementation:
+To demonstrate the analytical power of DAX in a real-world business context, I’ve developed a suite of measures that transform raw social media data into actionable strategy. These calculations go beyond simple arithmetic to solve complex questions regarding content performance and audience psychology.
 
-## Top Post Type
+### Identifying the Winning Format
 
-**Business Question:** Which content format drives the most engagement?
+The first priority for any content team is knowing where to double down. My Top Post Type measure identifies the single highest-performing content format by creating a virtual table that aggregates engagement across images, videos, links, and text. By utilizing VAR, TOPN, and CONCATENATEX, the measure doesn’t just crunch numbers; it returns a human-readable result like "Video" or "Infographic." This allows stakeholders to instantly see which format is winning without digging through raw data tables.
 
-**What it does:**  
-Identifies the single highest-performing content format (image, video, link, or text) based on total engagement.
+### Measuring Impact through Contribution
 
-**How it works:**  
-Creates a virtual table grouping posts by type with their total engagement, selects the top performer, and returns it as readable text.
+Understanding raw totals is helpful, but context is better. To provide that, I built the Post Type Share of Engagement measure. This calculation uses the classic CALCULATE and ALL pattern to determine what percentage of total engagement a specific format contributes. It is a vital tool for identifying "efficiency gaps"—for instance, if video content only accounts for 10% of your posts but generates 50% of your engagement, the data is sending a clear signal to shift resource allocation.
 
-**Functions Used:** `VAR`, `TOPN`, `SUMMARIZE`, `CONCATENATEX`
+### Quantifying the Sentiment Gap
 
-**Key Techniques:**  
-Unlike a simple `MAXX` which only returns a number, this measure returns the actual category name (e.g., "Video") in a stakeholder-friendly format.
-
-**Business Value:**  
-Directly answers "What type of content should we create more of?" Enables data-driven content strategy and resource allocation.
-
-
-
-## Post Type Share of Engagement
-
-**Business Question:** What percentage of total engagement does each content format contribute?
-
-**What it does:**  
-Calculates the percentage contribution of each content type to total engagement.
-
-**How it works:**  
-First calculates total engagement across all post types (ignoring any filters), then divides the current post type's engagement by that total.
-
-**Functions Used:** `CALCULATE`, `ALL`, `DIVIDE`
-
-**Key Techniques:**  
-Demonstrates the essential `CALCULATE` + `ALL` pattern required for percentage-of-total calculations.
-
-**Business Value:**  
-Reveals engagement concentration—for example, if videos drive 60% of engagement but only represent 20% of posts. Helps balance content strategy.
-
-
-
-## Low Positive Sentiment Engagement
-
-**Business Question:** Does below-average positive sentiment hurt engagement performance?
-
-**What it does:**  
-Measures average engagement specifically for posts with below-average positive sentiment.
-
-**How it works:**  
-Dynamically determines the average positive sentiment score, filters the fact table to include only posts scoring at or below that threshold, then calculates average engagement.
-
-**Functions Used:** `CALCULATE`, `FILTER`
-
-**Key Techniques:**  
-Pairs with *High Positive Sentiment Engagement* to create a true A/B test comparing performance across sentiment groups.
-
-**Business Value:**  
-Answers the critical question "Does positive content actually drive higher engagement?" Quantifies ROI of maintaining positive brand tone.
+Finally, to bridge the gap between brand tone and performance, I developed the Low Positive Sentiment Engagement measure. This is a dynamic calculation that first benchmarks the average positive sentiment across the entire dataset, then filters for posts that fall below that threshold to measure their specific engagement rate. When compared against its high-sentiment counterpart, this measure acts as a built-in A/B test, quantifying the exact ROI of maintaining a positive brand voice and proving whether "happy" content actually drives higher interaction.
