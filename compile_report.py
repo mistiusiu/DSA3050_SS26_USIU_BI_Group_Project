@@ -71,8 +71,7 @@ def knit_business_report(docs_dir):
         "dax-development/measures.md",
         "dax-development/logic-deep-dive.md",
         "dashboard/visuals-design.md",
-        "dashboard/insights.md",
-        "deployment/service-links.md"
+        "dashboard/insights.md"
     ]
 
     if not os.path.exists(output_dir):
