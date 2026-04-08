@@ -267,7 +267,7 @@ There is no meaningful correlation between word count and engagement. The data p
 
 ## Which Day and Hour has the Highest Engagement across Phases?
 
-![alt text](image-16.png)
+![alt text](<Engagement ( Day  Hour).png>)
 
 ### Findings
 
