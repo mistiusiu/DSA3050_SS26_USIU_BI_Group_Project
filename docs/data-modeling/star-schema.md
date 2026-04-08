@@ -1,5 +1,4 @@
-
-# Data Model Description
+# Data Architecture
 
 ## Overview
 

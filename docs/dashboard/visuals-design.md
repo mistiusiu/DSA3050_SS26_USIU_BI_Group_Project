@@ -1,3 +1,5 @@
+# Design Strategy
+
 ## Radar Chart — Engagement across COVID phases by influencer type
 A radar chart was chosen because it allows simultaneous comparison of multiple categories (COVID phases) across multiple groups (influencer tiers) in a single view. The concentric shape makes it immediately obvious which influencer tier covers the most "area" — visually communicating dominance without needing to read every number. A bar chart would have required multiple panels to achieve the same comparison.
 

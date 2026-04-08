@@ -1,6 +1,6 @@
 ![USIU Logo Color](assets/usiu-logo-color.png)
 
-# Social Media Sentiment BI Analytics
+# Social Media Business Intelligence
 
 Vivian Kipsang  
 Misati Nyambane  
