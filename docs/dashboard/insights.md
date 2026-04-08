@@ -2,7 +2,7 @@
 #  Line Chart
 ## Business Question – How has engagement grown over time by year and month?
 - This line chart tracks the Engagement Growth Trend across 2020–2022. It plots the period-over-period change rate, revealing where growth accelerated or declined.
-  
+
 ![alt text](../assets/Line_Chart.png)
  
 ### Findings:
@@ -23,6 +23,7 @@
 ## Business Question – How is positive sentiment distributed across post types?
 - This pie chart breaks down the total sum of Positive Sentiment by Post Type, showing which content formats collectively generate the most positive audience response.
 
+
 ![alt text](../assets/Pie_Chart.png)
 
 ### Findings:
@@ -42,7 +43,9 @@
 ## Business Question – Which post type generates the highest average engagement?
 - This bar chart compares the Average of Engagement across five post types — Text, Video, Photo, Link, and Poll — giving a fair, volume-neutral comparison of which format resonates most per post.
 
+
 ![alt text](../assets/Bar_Chart.png)
+
 
 ### Findings:
 –	Text leads on average: Counterintuitively, Text posts register the highest average engagement (approximately 285), edging out Video in this view. This may be driven by a small number of high-performing text posts inflating the average, or by the fact that text posts from high-tier influencers skew the mean.
@@ -62,8 +65,8 @@
 #  Key Influencers Visual
 ## Business Question – What factors most influence the likelihood of a post being classified as a Photo post?
 This Power BI Key Influencers visual identifies the conditions under which a post is most likely to be a Photo post, quantifying each factor's multiplicative impact on that likelihood.
-![alt text](../assets/Key_Influencers.png)
 
+![alt text](../assets/Key_Influencers.png)
  
 ### Findings:
 –	Word Count (7.91×): When the Average Word Count goes up by 8.84 words, the likelihood of the post being a Photo increases by 7.91 times. This is the single strongest driver. It may initially seem counterintuitive — one might expect photos to accompany short captions — but it suggests that photo posts in this dataset tend to carry longer descriptive captions or hashtag-heavy text.
