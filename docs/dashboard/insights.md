@@ -303,7 +303,7 @@ Influencer tier shapes how positively someone expresses themselves, but not how 
 
 For this chart, we examined the sentiment audiences directed at influencers through comments and interactions. The chart compares the average positive and negative sentiment scores across each influencer type, filtered to interaction-type posts only.
 
-![alt text](image-18.png)
+![alt text](<Sentiment (Audience).png>)
 
 ### Findings 
 
