@@ -9,7 +9,7 @@ The data model is designed using a **star schema**. This means there is one main
 
 All the dimension tables connect to the fact table, which makes it easy to analyze the data from different angles.
 
-![alt text](../assets/data_model_diagram.png)
+![alt text](<../assets/Star Schema.png>)
 
 ## Fact Table
 
