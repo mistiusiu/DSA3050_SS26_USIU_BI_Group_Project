@@ -201,7 +201,7 @@ For this chart, we are looking at the engagement across the 4 COVID-19 phases an
 
 ## How did Engagement Patterns Change across COVID Phases?
 
-![alt text](image-9.png)
+![alt text](<../assets/Box - PLot.png>)
 
 ### Findings
 
