@@ -47,9 +47,9 @@ Used to:
 
 
 
-### Dimension Table Day Power Query
+### Dimension Table Day
 
-![Dimension Table Day Power Query](../assets/dim_day.png)
+![Dimension Table Day](../assets/dim_day.png)
 
 Used to:
 
