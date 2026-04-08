@@ -62,7 +62,7 @@
 ---
 ---
 
-#  Key Influencers Visual
+# Key Influencers Visual
 ## Business Question – What factors most influence the likelihood of a post being classified as a Photo post?
 This Power BI Key Influencers visual identifies the conditions under which a post is most likely to be a Photo post, quantifying each factor's multiplicative impact on that likelihood.
 
