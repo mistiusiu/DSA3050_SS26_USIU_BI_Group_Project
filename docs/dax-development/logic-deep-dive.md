@@ -2,7 +2,7 @@
 
 Three advanced measures are highlighted below to demonstrate DAX proficiency and business logic implementation:
 
-## 1. Top Post Type
+## Top Post Type
 
 **Business Question:** Which content format drives the most engagement?
 
@@ -22,7 +22,7 @@ Directly answers "What type of content should we create more of?" Enables data-d
 
 
 
-## 2. Post Type Share of Engagement
+## Post Type Share of Engagement
 
 **Business Question:** What percentage of total engagement does each content format contribute?
 
@@ -42,7 +42,7 @@ Reveals engagement concentration—for example, if videos drive 60% of engagemen
 
 
 
-## 3. Low Positive Sentiment Engagement
+## Low Positive Sentiment Engagement
 
 **Business Question:** Does below-average positive sentiment hurt engagement performance?
 
