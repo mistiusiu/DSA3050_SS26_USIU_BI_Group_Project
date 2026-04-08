@@ -14,23 +14,17 @@ All the dimension tables connect to the fact table, which makes it easy to analy
 
 ## Fact Table
 
-### Fact_SocialMediaEngagement
+### Fact Table Social Media Engagement
 
 This is the **main table** in the model.
 
 Each row represents **one tweet**.
 
-It contains:
+![Fact Table Social Media Engagement Snippet 1](../assets/fact_social_media_1.png)
 
-* Engagement
-* Like_Count
-* Negative_Sentiment
-* Content_Type
-* Date
-* Day
-* Day_Type
-* Influencer_Status
-* Phase
+![Fact Table Social Media Engagement Snippet 2](../assets/fact_social_media_2.png)
+
+![Fact Table Social Media Engagement Snippet 3](../assets/fact_social_media_3.png)
 
 This table is used to:
 
@@ -43,17 +37,9 @@ This table is used to:
 
 These tables give **extra information** about the data in the fact table.
 
+### Dimension Table Date
 
-
-### Dim_Date
-
-Contains:
-
-* Date
-* Day Name
-* Month
-* Month Name
-* Year
+![Dimension Table Date](../assets/dim_date.png)
 
 Used to:
 
@@ -62,58 +48,48 @@ Used to:
 
 
 
-### Dim_Day
+### Dimension Table Day Power Query
 
-Contains:
+![Dimension Table Day Power Query](../assets/dim_day.png)
 
-* Day
-
- Used to:
+Used to:
 
 * Analyze engagement per day
 
 
-### Dim_DayType
+### Dimension Table Day Type
 
-Contains:
+![Dimension Table Day Type](../assets/dim_day_type.png)
 
-* Day_Type (Weekday / Weekend)
-
- Used to:
+Used to:
 
 * Compare weekend vs weekday performance
 
 
 
-### Dim_OpenHours
+### Dimension Table Open Hours
 
-Contains:
+![Dimension Table Open Hours](../assets/dim_open_hours.png)
 
-* Open_Hours (time of posting)
-
- Used to:
+Used to:
 
 * Find the best time to post
 
 
 
-### Dim_ContentType
+### Dimension Table Content Type
 
-Contains:
+![Dimension Table Content Type](../assets/dim_content_type.png)
 
-* Content_Type (image, video, text)
-
- Used to:
+Used to:
 
 * See which content performs best
 
 
 
-### Dim_PostType
+### Dimension Table Post Type
 
-Contains:
-
-* Post_Type
+![Dimension Table Post Type](../assets/dim_post_type.png)
 
 Used to:
 
@@ -121,11 +97,9 @@ Used to:
 
 
 
-### Dim_State
+### Dimension Table State
 
-Contains:
-
-* State
+![Dimension Table State](../assets/dim_state.png)
 
 Used to:
 
@@ -133,27 +107,31 @@ Used to:
 
 
 
-### Dim_InfluencerStatus
+### Dimension Table Influencer Status
 
-Contains:
-
-* Influencer_Status
+![Dimension Table Influencer Status](../assets/dim_influencer_status.png)
 
 Used to:
 
 * Compare high vs low influence accounts
 
 
-### Dim_Phase
+### Dimension Table Phase
 
-Contains:
-
-* 4_Phase (pre-COVID, lockdown, post-COVID)
+![Dimension Table Phase](../assets/dim_phase.png)
 
 Used to:
 
 * Analyze how engagement changed over time
 
+
+### Dimension Table Verbosity
+
+![Dimension Table Verbosity](../assets/dim_verbosity.png)
+
+Used to:
+
+* Write something here 
 
 
 ## Relationships
