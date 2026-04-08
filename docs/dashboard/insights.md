@@ -114,11 +114,11 @@ This Power BI Key Influencers visual identifies the conditions under which a pos
 ## How does Total Engagement compare Across Content Types for Different Influencer Tiers?
 
 This chart compares Total Engagement for Information and Interaction content types across different influencer groups.
-
+![alt text](../assets/Horizontal_Bar_Chart.png)
 
 ### Findings:
 –	Interaction content leads for both groups: Both Celebrity and Macro Influencer bars are longer for Interaction content than for Information content. This universally confirms that audience engagement is higher when content is interactive rather than purely informational — consistent with the verbosity and stacked column analyses.
-![alt text](image-4.png)
+
 
 ### Findings
 
@@ -138,7 +138,7 @@ This chart compares Total Engagement for Information and Interaction content typ
 This grouped bar chart cross-analyses Average Engagement by both Post Type and Verbosity level (Extreme, High, Low, Medium), revealing whether the optimal word count varies by the type of post being created.
 
 
-![alt text](image-5.png)
+![alt text](../assets/Verbosity.png)
 
 ### Findings
 
@@ -154,7 +154,7 @@ This grouped bar chart cross-analyses Average Engagement by both Post Type and V
 
 ## What Post Type do Different Segment Influencers Post?
 
-![alt text](image-6.png)
+![alt text](<../assets/post_Type by influencer.png>)
 
 ### Findings
 
@@ -176,7 +176,7 @@ This grouped bar chart cross-analyses Average Engagement by both Post Type and V
 For this chart, we look at which regions drive the highest follower count; three states stand out: Kerala, Gujarat, and Odisha.
 Insights: What makes these states unique in the data is that their high average follower counts are driven exclusively by Celebrity influencers. We don’t see a mix of smaller tiers reaching these numbers in these regions.
 
-![alt text](image-7.png)
+![alt text](../assets/StatesFollowers.png)
 
 ### Findings
 
@@ -185,7 +185,7 @@ Insights: What makes these states unique in the data is that their high average 
 
 ##  How does Influencer Status affect Engagement across Phases?
 
-![alt text](image-8.png)
+![alt text](../assets/InfStatusEng.png)
 
 For this chart, we are looking at the engagement across the 4 COVID-19 phases and how it affects each influencer type.
 
@@ -215,7 +215,7 @@ For this chart, we are looking at the engagement across the 4 COVID-19 phases an
 
 ## How do Engagement Levels Change over Time?
 
-![alt text](image-10.png)
+![alt text](../assets/EngOverTime.png)
 
 ### Findings 
 
@@ -229,7 +229,7 @@ For this chart, we are looking at the engagement across the 4 COVID-19 phases an
 
 ## Which Post Type Generates the Highest Engagement?
 
-![alt text](image-11.png)
+![alt text](../assets/PostTypeEng.png)
 
 ### Findings
 
@@ -259,8 +259,7 @@ For nano influencers:
 
 ## Does Verbosity Impact Engagement Levels on Content Type?
 
-![alt text](image-12.png)
-
+![alt text](../assets/Verbosity.png)
 ### Findings
 
 Medium verbosity drives the highest overall engagement regardless of content type
@@ -277,7 +276,7 @@ If you want consistent engagement, Interaction content is the safer bet across a
 
 For this chart, we look at how much influencer posts vs how much their audience interacts. We used Average Engagement scores to make our comparisons fair, regardless of how much each person posts. 
 
-![alt text](image-13.png)
+![alt text](../assets/VerbEng.png)
 
 ### Findings
 
@@ -293,7 +292,7 @@ For this chart, we look at how much influencer posts vs how much their audience 
 
 This scatter plot maps out every post by its word count versus the engagement it received. If writing more led to more likes, we would see the dots trending upward as we move to the right. 
 
-![alt text](image-14.png)
+![alt text](../assets/WordENg.png)
 
 ### Findings
 
