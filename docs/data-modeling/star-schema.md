@@ -138,13 +138,12 @@ Used to:
 
 All tables are connected in this way:
 
- **Dimension → Fact (One-to-Many relationship)**
+**Dimension → Fact (One-to-Many relationship)**
 
 This means:
 
 * One value in a dimension (e.g. one date)
 * Can relate to many tweets in the fact table
-
 
 
 ### Example:
@@ -153,14 +152,11 @@ This means:
 * One content type → many tweets
 * One state → many tweets
 
-
-
 ## Important Points
 
 * All dimension tables connect **only to the fact table**
 * Dimension tables do **not connect to each other**
 * Filtering always goes from dimension → fact
-
 
 
 ### Example of how it works
