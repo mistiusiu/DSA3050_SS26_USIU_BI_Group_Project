@@ -1,11 +1,6 @@
 # Data Dictionary
 
-
 This provides a detailed description of all variables used in the Social Media Engagement dataset obtained from Kaggle. The purpose of this data dictionary is to enhance data understanding, ensure consistency and support effective analysis.
-
-![alt text](image.png)
-
-![alt text](image-1.png)
 
 The dataset captures social media performance using engagement metrics, temporal variables, audience characteristics, content attributes, sentiment scores and linguistic features derived from LIWC analysis.
 
@@ -23,4 +18,7 @@ The motivation and influence model focuses on the expression of goals, intention
 The conflict and interaction model captures the presence of tension, disagreement or opposition within content, providing insight into how controversial or confrontational language influences engagement. The conflict variable identifies words and expressions associated with argument, criticism or debate highlighting whether the content introduces opposing viewpoints or challenges existing perspectives. Conflict driven content can attract attention and stimulate interaction, it also carries potential risks, including negative sentiment, audience polarization and reputational damage. This model is particularly relevant in the context of social media, where provocative or controversial posts often generate high levels of engagement but may not always align with brand objectives. By incorporating this variable into analysis, analysts can evaluate the trade off between visibility and sentiment, helping organizations make informed decisions about the tone and positioning of their content.
 
 The sentiment model provides a consolidated measure of the overall emotional tone of content, simplifying complex linguistic patterns into interpretable scores. Variables such as positive sentiment, negative sentiment, and total sentiment summarize the emotional direction and intensity of text, offering a high-level view of how content is likely to be perceived by audiences.The more granular emotional variables in the psychological process model, sentiment scores aggregate multiple dimensions of language into a single metric, making them particularly useful for comparative analysis and dashboard visualization in Power BI. Positive sentiment typically indicates favorable reception and alignment with audience expectations, while negative sentiment may signal dissatisfaction or controversy. Total sentiment provides a net measure, balancing positive and negative influences to give an overall assessment of tone. This model is essential for quickly identifying trends, benchmarking performance and guiding strategic decisions related to content creation and audience engagement.
-THANK YOU!
+
+![alt text](image.png)
+
+![alt text](image-1.png)
