@@ -10,5 +10,3 @@ Levin Ekuam - Visualization & Business Insights
 Ilham Mohammed - Visualization & Business Insights  
 
 **DSA3050: Business Intelligence and Data Visualization**
-
-April 8, 2026
