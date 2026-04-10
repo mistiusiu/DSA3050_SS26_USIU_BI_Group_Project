@@ -1,0 +1,2155 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://mistiusiu.github.io/DSA3050_SS26_USIU_BI_Group_Project/dashboard/insights/">
+      
+      
+        <link rel="prev" href="../visuals-design/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/usiu-logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Business Insights - Social Media Sentiment BI Analytics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra-minimal.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#business-insights" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Social Media Sentiment BI Analytics" class="md-header__button md-logo" aria-label="Social Media Sentiment BI Analytics" data-md-component="logo">
+      
+  <img src="../../assets/usiu-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Social Media Sentiment BI Analytics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Business Insights
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Social Media Sentiment BI Analytics" class="md-nav__button md-logo" aria-label="Social Media Sentiment BI Analytics" data-md-component="logo">
+      
+  <img src="../../assets/usiu-logo.png" alt="logo">
+
+    </a>
+    Social Media Sentiment BI Analytics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project Definition
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Project Definition
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project-setup/problem-statement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Statement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project-setup/data-dictionary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Dictionary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../power-query/transformations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ETL & Power Query
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-modeling/star-schema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DAX Calculations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DAX Calculations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dax-development/measures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Measures Library
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dax-development/logic-deep-dive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Logic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Insights & Visuals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Insights & Visuals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visuals-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Strategy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Business Insights
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Business Insights
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="CONTENTS">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      CONTENTS
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-has-engagement-grown-over-time-by-year-and-month" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How has Engagement Grown over Time by Year and Month?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How has Engagement Grown over Time by Year and Month?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-is-positive-sentiment-distributed-across-post-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How is Positive Sentiment Distributed across Post Types?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How is Positive Sentiment Distributed across Post Types?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-post-type-generates-the-highest-engagement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which Post Type Generates the Highest Engagement?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Which Post Type Generates the Highest Engagement?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-is-positive-sentiment-distributed-across-post-types_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How is Positive Sentiment Distributed across Post Types?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How is Positive Sentiment Distributed across Post Types?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-post-type-generates-the-highest-engagement_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which Post Type Generates the Highest Engagement?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Which Post Type Generates the Highest Engagement?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-factors-most-influence-the-likelihood-of-a-post-being-classified-as-a-photo-post" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Factors most Influence the Likelihood of a Post being Classified as a Photo Post?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Factors most Influence the Likelihood of a Post being Classified as a Photo Post?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-total-engagement-compare-across-content-types-for-different-influencer-tiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How does Total Engagement compare Across Content Types for Different Influencer Tiers?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How does Total Engagement compare Across Content Types for Different Influencer Tiers?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-verbosity-interact-with-post-type-to-affect-engagement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How does Verbosity Interact with Post Type to affect Engagement?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How does Verbosity Interact with Post Type to affect Engagement?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-post-type-do-different-segment-influencers-post" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Post Type do Different Segment Influencers Post?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Post Type do Different Segment Influencers Post?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-states-have-socialites-the-highest-number-of-followers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which States have Socialites the Highest Number of Followers?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Which States have Socialites the Highest Number of Followers?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-influencer-status-affect-engagement-across-phases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How does Influencer Status affect Engagement across Phases?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How does Influencer Status affect Engagement across Phases?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-did-engagement-patterns-change-across-covid-phases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How did Engagement Patterns Change across COVID Phases?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How did Engagement Patterns Change across COVID Phases?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-engagement-levels-change-over-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How do Engagement Levels Change over Time?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How do Engagement Levels Change over Time?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-post-type-generates-the-highest-engagement_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which Post Type Generates the Highest Engagement?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Which Post Type Generates the Highest Engagement?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#does-verbosity-impact-engagement-levels-on-content-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Does Verbosity Impact Engagement Levels on Content Type?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Does Verbosity Impact Engagement Levels on Content Type?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#does-verbosity-affect-engagement-differently-by-influencer-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Does Verbosity affect Engagement Differently by Influencer Type?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Does Verbosity affect Engagement Differently by Influencer Type?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#does-word-count-influence-engagement-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Does Word Count Influence Engagement Levels?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Does Word Count Influence Engagement Levels?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-states-have-the-highest-engagement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which States have the Highest Engagement?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Which States have the Highest Engagement?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-day-and-hour-has-the-highest-engagement-across-phases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which Day and Hour has the Highest Engagement across Phases?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Which Day and Hour has the Highest Engagement across Phases?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-sentiments-do-influencers-express-in-their-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Sentiments do Influencers Express in their Content?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Sentiments do Influencers Express in their Content?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-sentiment-do-audiences-direct-back-at-influencers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Sentiment do Audiences Direct Back at Influencers?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Sentiment do Audiences Direct Back at Influencers?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="CONTENTS">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      CONTENTS
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-has-engagement-grown-over-time-by-year-and-month" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How has Engagement Grown over Time by Year and Month?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How has Engagement Grown over Time by Year and Month?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-is-positive-sentiment-distributed-across-post-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How is Positive Sentiment Distributed across Post Types?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How is Positive Sentiment Distributed across Post Types?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-post-type-generates-the-highest-engagement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which Post Type Generates the Highest Engagement?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Which Post Type Generates the Highest Engagement?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-is-positive-sentiment-distributed-across-post-types_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How is Positive Sentiment Distributed across Post Types?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How is Positive Sentiment Distributed across Post Types?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-post-type-generates-the-highest-engagement_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which Post Type Generates the Highest Engagement?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Which Post Type Generates the Highest Engagement?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-factors-most-influence-the-likelihood-of-a-post-being-classified-as-a-photo-post" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Factors most Influence the Likelihood of a Post being Classified as a Photo Post?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Factors most Influence the Likelihood of a Post being Classified as a Photo Post?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-total-engagement-compare-across-content-types-for-different-influencer-tiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How does Total Engagement compare Across Content Types for Different Influencer Tiers?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How does Total Engagement compare Across Content Types for Different Influencer Tiers?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-verbosity-interact-with-post-type-to-affect-engagement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How does Verbosity Interact with Post Type to affect Engagement?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How does Verbosity Interact with Post Type to affect Engagement?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-post-type-do-different-segment-influencers-post" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Post Type do Different Segment Influencers Post?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Post Type do Different Segment Influencers Post?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-states-have-socialites-the-highest-number-of-followers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which States have Socialites the Highest Number of Followers?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Which States have Socialites the Highest Number of Followers?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-influencer-status-affect-engagement-across-phases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How does Influencer Status affect Engagement across Phases?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How does Influencer Status affect Engagement across Phases?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-did-engagement-patterns-change-across-covid-phases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How did Engagement Patterns Change across COVID Phases?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How did Engagement Patterns Change across COVID Phases?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-engagement-levels-change-over-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How do Engagement Levels Change over Time?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How do Engagement Levels Change over Time?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-post-type-generates-the-highest-engagement_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which Post Type Generates the Highest Engagement?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Which Post Type Generates the Highest Engagement?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#does-verbosity-impact-engagement-levels-on-content-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Does Verbosity Impact Engagement Levels on Content Type?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Does Verbosity Impact Engagement Levels on Content Type?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#does-verbosity-affect-engagement-differently-by-influencer-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Does Verbosity affect Engagement Differently by Influencer Type?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Does Verbosity affect Engagement Differently by Influencer Type?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#does-word-count-influence-engagement-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Does Word Count Influence Engagement Levels?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Does Word Count Influence Engagement Levels?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-states-have-the-highest-engagement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which States have the Highest Engagement?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Which States have the Highest Engagement?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-day-and-hour-has-the-highest-engagement-across-phases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which Day and Hour has the Highest Engagement across Phases?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Which Day and Hour has the Highest Engagement across Phases?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-sentiments-do-influencers-express-in-their-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Sentiments do Influencers Express in their Content?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Sentiments do Influencers Express in their Content?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-sentiment-do-audiences-direct-back-at-influencers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Sentiment do Audiences Direct Back at Influencers?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Sentiment do Audiences Direct Back at Influencers?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findings_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="business-insights">Business Insights</h1>
+<h2 id="how-has-engagement-grown-over-time-by-year-and-month">How has Engagement Grown over Time by Year and Month?</h2>
+<p>This line chart tracks the Engagement Growth Trend across 2020–2022. It plots the period-over-period change rate, revealing where growth accelerated or declined.</p>
+<p><img alt="How has Engagement Grown over Time by Year and Month?" src="../../assets/Line_Chart.png" /></p>
+<h3 id="findings">Findings</h3>
+<p><strong>2020 Volatility:</strong> The chart shows extreme swings early in 2020, with growth spiking sharply positive before dropping to its most negative point (approximately –4), consistent with the disruption of COVID lockdowns creating an initial content surge followed by audience fatigue.</p>
+<p><strong>2021 Stabilisation:</strong> Growth rates moderate significantly through 2021, oscillating in a tighter band around zero. This reflects audiences re-establishing regular consumption patterns as restrictions eased.</p>
+<p><strong>2022 Plateau:</strong> By 2022, the growth trend flattens and hugs the zero line, indicating that engagement levels have stabilised rather than growing. The market appears to have reached a post-pandemic equilibrium.</p>
+<p><strong>Negative Dip (Mid-2020):</strong> The most dramatic negative trough,
+around –4, aligns with peak lockdown fatigue. Even as audiences were home and online, overall engagement growth collapsed, mirroring findings from the box plot analysis of COVID phases.</p>
+<h2 id="how-is-positive-sentiment-distributed-across-post-types">How is Positive Sentiment Distributed across Post Types?</h2>
+<p>This pie chart breaks down the total sum of Positive Sentiment by Post Type, showing which content formats collectively generate the most positive audience response.</p>
+<p><img alt="How is Positive Sentiment Distributed across Post Types?" src="../../assets/Pie_Chart.png" /></p>
+<h3 id="findings_1">Findings</h3>
+<p><strong>Photo dominates overwhelmingly:</strong> With 78.45% (23K) of all positive sentiment, Photo posts are by far the most positively received content format. This aligns with the finding that photo is also the most frequently posted type across all influencer tiers.</p>
+<p><strong>Video holds a meaningful share:</strong> Video accounts for a notable secondary slice, confirming its elevated engagement performance observed in the stacked column chart analysis. Audiences respond positively even though video is rarely used.</p>
+<p><strong>Text posts contribute modestly:</strong> Text represents 15.02% (4K) of positive sentiment, respectable given it is the second most commonly used post format, though far behind photo.</p>
+<p><strong>Link and Poll are negligible:</strong> Together, Link (4.62%, 1K) and Poll account for a very small fraction of positive sentiment, confirming that these formats rarely resonate with audiences across the dataset.</p>
+<h2 id="which-post-type-generates-the-highest-engagement">Which Post Type Generates the Highest Engagement?</h2>
+<p>This bar chart compares the Average of Engagement across five post types: Text, Video, Photo, Link, and Poll; giving a fair, volume-neutral comparison of which format resonates most per post.</p>
+<p><img alt="Which Post Type Generates the Highest Engagement?" src="../../assets/Bar_Chart.png" /></p>
+<h3 id="findings_2">Findings</h3>
+<p><strong>Text leads on average:</strong> Counterintuitively, Text posts register the highest average engagement (approximately 285), edging out Video in this view. This may be driven by a small number of high-performing text posts inflating the average, or by the fact that text posts from high-tier influencers skew the mean.</p>
+<p><strong>Video is a close second:</strong> Video averages approximately 265 engagements, confirming its strong performance. Combined with the stacked column findings (where Video has the highest engagement per tier), Video remains a premium-performing format.</p>
+<p><strong>Photo performs well in volume but modestly in average:</strong> Despite dominating total sentiment and posting volume, Photo's average engagement (~190) sits below both Text and Video, suggesting diminishing returns as photo volume increases.</p>
+<p><strong>Link performs below expectations:</strong> With an average around 65, Link posts generate relatively low engagement, suggesting audiences on this platform are reluctant to leave for external content.</p>
+<p><strong>Poll barely registers:</strong> Poll has the lowest average engagement of all post types, confirming it as the least effective format in this dataset.</p>
+<h2 id="how-is-positive-sentiment-distributed-across-post-types_1">How is Positive Sentiment Distributed across Post Types?</h2>
+<p>This pie chart breaks down the total sum of Positive Sentiment by Post Type, showing which content formats collectively generate the most positive audience response.</p>
+<p><img alt="How is Positive Sentiment Distributed across Post Types?" src="../../assets/Pie_Chart.png" /></p>
+<h3 id="findings_3">Findings</h3>
+<p><strong>Photo dominates overwhelmingly:</strong> With 78.45% (23K) of all positive sentiment, Photo posts are by far the most positively received content format. This aligns with the finding that photo is also the most frequently posted type across all influencer tiers.</p>
+<p><strong>Video holds a meaningful share:</strong> Video accounts for a notable secondary slice, confirming its elevated engagement performance observed in the stacked column chart analysis. Audiences respond positively even though video is rarely used.</p>
+<p><strong>Text posts contribute modestly:</strong> Text represents 15.02% (4K) of positive sentiment, respectable given it is the second most commonly used post format, though far behind photo.</p>
+<p><strong>Link and Poll are negligible:</strong> Together, Link (4.62%, 1K) and Poll account for a very small fraction of positive sentiment, confirming that these formats rarely resonate with audiences across the dataset.</p>
+<h2 id="which-post-type-generates-the-highest-engagement_1">Which Post Type Generates the Highest Engagement?</h2>
+<p>This bar chart compares the Average of Engagement across five post types, Text, Video, Photo, Link, and Poll, giving a fair, volume-neutral comparison of which format resonates most per post.</p>
+<p><img alt="Which Post Type Generates the Highest Engagement?" src="../../assets/Bar_Chart.png" /></p>
+<h3 id="findings_4">Findings</h3>
+<p><strong>Text leads on average:</strong> Counterintuitively, Text posts register the highest average engagement (approximately 285), edging out Video in this view. This may be driven by a small number of high-performing text posts inflating the average, or by the fact that text posts from high-tier influencers skew the mean.</p>
+<p><strong>Video is a close second:</strong> Video averages approximately 265 engagements, confirming its strong performance. Combined with the stacked column findings (where Video has the highest engagement per tier), Video remains a premium-performing format.</p>
+<p><strong>Photo performs well in volume but modestly in average:</strong> Despite dominating total sentiment and posting volume, Photo's average engagement (~190) sits below both Text and Video, suggesting diminishing returns as photo volume increases.</p>
+<p><strong>Link performs below expectations:</strong> With an average around 65, Link posts generate relatively low engagement, suggesting audiences on this platform are reluctant to leave for external content.</p>
+<p><strong>Poll barely registers:</strong> Poll has the lowest average engagement of all post types, confirming it as the least effective format in this dataset.
+ </p>
+<h2 id="what-factors-most-influence-the-likelihood-of-a-post-being-classified-as-a-photo-post">What Factors most Influence the Likelihood of a Post being Classified as a Photo Post?</h2>
+<p>This Power BI Key Influencers visual identifies the conditions under which a post is most likely to be a Photo post, quantifying each factor's multiplicative impact on that likelihood.</p>
+<p><img alt="What Factors most Influence the Likelihood of a Post being Classified as a Photo Post?" src="../../assets/Key_Influencers.png" /></p>
+<h3 id="findings_5">Findings</h3>
+<p><strong>Word Count (7.91×):</strong> When the Average Word Count goes up by 8.84 words, the likelihood of the post being a Photo increases by 7.91 times. This is the single strongest driver. It may initially seem counterintuitive — one might expect photos to accompany short captions — but it suggests that photo posts in this dataset tend to carry longer descriptive captions or hashtag-heavy text.</p>
+<p><strong>Negative Sentiment (2.18×):</strong> When Average Negative Sentiment decreases by 0.02, the likelihood of a Photo post increases by 2.18 times. Lower negativity is associated with photo content, reinforcing the idea that photo posts tend to be more positive and polished in tone.</p>
+<p><strong>Engagement (1.01×):</strong> When Average Engagement decreases by 103.38, the likelihood of a Photo post increases marginally (1.01×). This is a near-neutral effect — engagement alone is not a meaningful predictor of photo format selection.</p>
+<h2 id="how-does-total-engagement-compare-across-content-types-for-different-influencer-tiers">How does Total Engagement compare Across Content Types for Different Influencer Tiers?</h2>
+<p>This chart compares Total Engagement for Information and Interaction content types across different influencer groups.</p>
+<p><img alt="How does Total Engagement compare Across Content Types for Different Influencer Tiers?" src="../../assets/Horizontal_Bar_Chart.png" /></p>
+<h3 id="findings_6">Findings</h3>
+<p><strong>Interaction content leads for both groups:</strong> Both Celebrity and Macro Influencer bars are longer for Interaction content than for Information content. This universally confirms that audience engagement is higher when content is interactive rather than purely informational — consistent with the verbosity and stacked column analyses.</p>
+<p><strong>Celebrities generate more total engagement in Interaction:</strong> Celebrity Interaction bars extend noticeably further (approaching ~2M total engagements) compared to Macro Influencer Interaction, reinforcing the tier-based engagement hierarchy.</p>
+<p><strong>Information content is more evenly matched:</strong> The gap between Celebrities and Macro Influencers narrows for Information content, suggesting that the celebrity advantage is more pronounced for interactive posts.</p>
+<p><strong>Celebrity advantage is format-dependent:</strong> Celebrities do not simply outperform across the board, their lead is most pronounced in Interaction content, suggesting their audiences engage most when the content invites a response rather than delivers information.</p>
+<h2 id="how-does-verbosity-interact-with-post-type-to-affect-engagement">How does Verbosity Interact with Post Type to affect Engagement?</h2>
+<p>This grouped bar chart cross-analyses Average Engagement by both Post Type and Verbosity level (Extreme, High, Low, Medium), revealing whether the optimal word count varies by the type of post being created.</p>
+<p><img alt="How does Verbosity Interact with Post Type to affect Engagement?" src="../../assets/Verbosity.png" /></p>
+<h3 id="findings_7">Findings</h3>
+<p><strong>Text at Extreme verbosity peaks dramatically:</strong> The most striking finding is that Text posts at Extreme verbosity (purple bar) reach nearly 1,000 average engagement — far above any other combination in the chart. This is an outlier result suggesting that long-form text content, when it does break through, generates outsized engagement.</p>
+<p><strong>Video performs consistently across verbosity levels:</strong> Video posts maintain strong average engagement across all verbosity levels, with the Medium and Low categories performing particularly well (~300–500). This reinforces video's position as the most reliable high-performing post format.</p>
+<p><strong>Photo shows moderate, stable performance:</strong> Photo posts deliver consistent but moderate engagement across all verbosity levels, with no single verbosity category dramatically outperforming others. Photo remains a volume format rather than an engagement spike driver.</p>
+<p><strong>Link and Poll remain low across all verbosity levels:</strong> Regardless of how much text accompanies them, Link and Poll posts generate very low engagement. Verbosity cannot rescue underperforming formats.</p>
+<p><strong>Extreme verbosity is high-risk, high-reward:</strong> The extreme verbosity category shows the widest spread of results — from very high (Text) to very low (Link/Poll). Short to medium captions appear safer for most formats.</p>
+<h2 id="what-post-type-do-different-segment-influencers-post">What Post Type do Different Segment Influencers Post?</h2>
+<p><img alt="What Post Type do Different Segment Influencers Post?" src="../../assets/post_Type%20by%20influencer.png" /></p>
+<h3 id="findings_8">Findings</h3>
+<p><strong>Photos dominate:</strong> Photos are the main content type for all influencer tiers at all times.</p>
+<p><strong>Macro influencers lead:</strong> They post the most, peaking at nearly 4,000 posts after lockdown.</p>
+<p><strong>Nano influencers lag:</strong> They post the least, rarely going above 200 posts.</p>
+<p><strong>Pandemic drop:</strong> Posting decreased significantly during lockdown for all tiers.</p>
+<p><strong>Strong recovery:</strong> Activity increased after lockdown, with Macro and Micro influencers surpassing pre-Covid levels.</p>
+<p><strong>Micro vs Celebrity:</strong> Micro influencers post more than Celebrities, especially before and after lockdown. </p>
+<h2 id="which-states-have-socialites-the-highest-number-of-followers">Which States have Socialites the Highest Number of Followers?</h2>
+<p>For this chart, we look at which regions drive the highest follower count; three states stand out: Kerala, Gujarat, and Odisha.
+Insights: What makes these states unique in the data is that their high average follower counts are driven exclusively by Celebrity influencers. We don’t see a mix of smaller tiers reaching these numbers in these regions.</p>
+<p><img alt="Which States have Socialites the Highest Number of Followers?" src="../../assets/StatesFollowers.png" /></p>
+<h3 id="findings_9">Findings</h3>
+<p>Massive follower reach in these specific states is highly dependent on "Celebrity" status rather than a broad base of smaller creators.</p>
+<p>High-follower influence is not evenly distributed across the map; instead, it is geographically concentrated, with these three states acting as the primary hubs for the most followed influencers in our dataset.</p>
+<h2 id="how-does-influencer-status-affect-engagement-across-phases">How does Influencer Status affect Engagement across Phases?</h2>
+<p><img alt="How does Influencer Status affect Engagement across Phases?" src="../../assets/InfStatusEng.png" /></p>
+<p>For this chart, we are looking at the engagement across the 4 COVID-19 phases and how it affects each influencer type.</p>
+<h3 id="findings_10">Findings</h3>
+<p><strong>Celebrities:</strong> We can see that they are in a league of their own. This is because they lead in every single phase. When everyone was stuck at home, their content was a go-to for most people. Their lowest was pre-COVID, which is still higher than almost anyone else's peak.</p>
+<p><strong>Macro Influencers:</strong> They mirror the celebrities but on a smaller scale. Their performance peaked during the Unlocking phase, suggesting their content resonated most as people began transitioning back to normal life.</p>
+<p><strong>Micro Influencers:</strong> They saw their best results in the Post-Lockdown Period, which indicates that their engagement wasn’t tied to a global crisis; instead, it grew as people settled back into their post-pandemic routines.</p>
+<p><strong>Nano-Influencer:</strong> They occupy the smallest area on the chart. While they saw a relatively high level during the COVID lockdown, their engagement dropped to its lowest point during the Unlocking phase.</p>
+<h2 id="how-did-engagement-patterns-change-across-covid-phases">How did Engagement Patterns Change across COVID Phases?</h2>
+<p><img alt="How did Engagement Patterns Change across COVID Phases?" src="../../assets/Box%20-%20PLot.png" /></p>
+<h3 id="findings_11">Findings</h3>
+<p><strong>The "Pre-Covid" Baseline:</strong> Before the pandemic, engagement was naturally high, peaking at 33.80K.This represents our 'normal' world where people were consistently active and engaging with content at a high level.</p>
+<p><strong>The "Lockdown" Crash:</strong> During the Lockdown, engagement plummeted to its lowest point of 5.02K. When the lockdowns hit, engagement crashed. The pandemic effectively 'froze' activity, likely because people shifted their focus away from this specific type of content toward survival or essential needs.</p>
+<p><strong>The "Unlocking" Explosion:</strong> As soon as restrictions lifted, engagement hit an all-time record of 48.86K.This is the most interesting part. Once the world started 'Unlocking,' we saw a massive 'Rebound Effect.' The levels were even higher than before the pandemic as people rushed back to their old habits.</p>
+<p><strong>The "Post-Lockdown" Reality:</strong> Currently, engagement has settled at 13.09K, which is much lower than the original Pre-Covid levels. Finally, we see the 'New Normal.' Even though the surge was huge, it didn't last.People have adjusted to a new reality where engagement is much lower than before, suggesting that the pandemic caused a lasting shift in how people interact with content.</p>
+<h2 id="how-do-engagement-levels-change-over-time">How do Engagement Levels Change over Time?</h2>
+<p><img alt="How do Engagement Levels Change over Time?" src="../../assets/EngOverTime.png" /></p>
+<h3 id="findings_12">Findings</h3>
+<p><strong>Pre-Covid Phase (Mar 2019 – Mar 2020):</strong> Engagement started relatively low but showed an early spike around Jul 2019 for Celebrities (~400), suggesting an active pre-pandemic digital environment. All influencer tiers maintained steady but modest engagement levels during this period.</p>
+<p><strong>Covid Lockdown (Mar 2020 – Jun 2020):</strong> Celebrity engagement spiked dramatically to ~575 around Jan 2020 just before lockdown, then experienced the most volatile period in the entire timeline. The biggest spike in the entire dataset occurs around Jul 2020 (~725) — right at the start of Post Lockdown — confirming that lockdown created extraordinary engagement opportunities for Celebrities.</p>
+<p><strong>Unlocking (Jun 2020 – Jan 2021):</strong> Engagement remained elevated but began fluctuating significantly. Celebrities continued dominating while Macro Influencers showed a gradual upward trend, slowly closing the gap.</p>
+<p><strong>Post Lockdown (Jan 2021 – Jan 2022):</strong> Celebrity engagement gradually declined from its pandemic peak but stabilised at a higher level than pre-COVID. Macro Influencers continued their upward trajectory, reaching their highest levels during this phase. Macro Influencers show a clear upward trend, while Micro and Nano Influencers remain relatively flat, indicating that the pandemic's impact on engagement was most pronounced for higher-tier influencers.</p>
+<h2 id="which-post-type-generates-the-highest-engagement_2">Which Post Type Generates the Highest Engagement?</h2>
+<p><img alt="Which Post Type Generates the Highest Engagement?" src="../../assets/PostTypeEng.png" /></p>
+<h3 id="findings_13">Findings</h3>
+<p>For celebrities:</p>
+<ul>
+<li>Video has the highest engagement    </li>
+<li>Photo is second</li>
+<li>Interaction content outperforms Information  across most post types</li>
+</ul>
+<p>For macro influencers:</p>
+<ul>
+<li>Video also dominates </li>
+<li>Photo and Text are strong second options</li>
+<li>Similar pattern to Celebrities — Interaction content leads</li>
+</ul>
+<p>For micro influencers:</p>
+<ul>
+<li>Video again leads </li>
+<li>Much lower overall compared to Celebrity and Macro</li>
+<li>Same Interaction &gt; Information pattern holds</li>
+</ul>
+<p>For nano influencers:</p>
+<ul>
+<li>Engagement is very low across all post types</li>
+<li>No single post type clearly dominates</li>
+<li>Barely registers compared to other tiers</li>
+</ul>
+<h2 id="does-verbosity-impact-engagement-levels-on-content-type">Does Verbosity Impact Engagement Levels on Content Type?</h2>
+<p><img alt="Does Verbosity Impact Engagement Levels on Content Type?" src="../../assets/Verbosity.png" /></p>
+<h3 id="findings_14">Findings</h3>
+<p>Medium verbosity drives the highest overall engagement regardless of content type</p>
+<p>Interaction content is more resilient — it performs consistently well across all verbosity levels, never dropping as sharply as Information </p>
+<p>Information content is most vulnerable at High verbosity — it drops significantly, suggesting audiences disengage from purely informational content when verbosity is high but not extreme</p>
+<p>At Low verbosity, Information slightly outperforms Interaction — the only level where this reversal occurs</p>
+<p>If you want consistent engagement, Interaction content is the safer bet across all verbosity levels. Information content is more volatile — it peaks at Medium and Low but struggles at High verbosity.</p>
+<h2 id="does-verbosity-affect-engagement-differently-by-influencer-type">Does Verbosity affect Engagement Differently by Influencer Type?</h2>
+<p>For this chart, we look at how much influencer posts vs how much their audience interacts. We used Average Engagement scores to make our comparisons fair, regardless of how much each person posts. </p>
+<p><img alt="Does Verbosity affect Engagement Differently by Influencer Type?" src="../../assets/VerbEng.png" /></p>
+<h3 id="findings_15">Findings</h3>
+<p><strong>Celebrities:</strong> They don’t need to say much on their social media, hence why their highest engagement is at “Low”, hitting nearly 500 interactions. Interestingly, they completely disappear from the data entirely at the “Extreme” verbosity level, which suggests their audience prefers short, quick updates.</p>
+<p><strong>Micro-Influencers:</strong> They have to work harder, end up seeing an opposite trend where their engagement is low for short posts but takes the lead at “Extreme” verbosity. </p>
+<p><strong>Macro-Influencers:</strong> They have a middle ground where they perform consistently well but peak when they provide a moderate amount of content, nearly catching up to celebrities at the “Medium” level.</p>
+<p><strong>Nano-Influencer:</strong> Their engagement levels remain low across the board, showing very little change, no matter how much they write. </p>
+<h2 id="does-word-count-influence-engagement-levels">Does Word Count Influence Engagement Levels?</h2>
+<p>This scatter plot maps out every post by its word count versus the engagement it received. If writing more led to more likes, we would see the dots trending upward as we move to the right. </p>
+<p><img alt="Does Word Count Influence Engagement Levels?" src="../../assets/WordENg.png" /></p>
+<h3 id="findings_16">Findings</h3>
+<p>Celebrities "break" the chart at low word counts. The highest engagement spikes in the entire study happen when Celebrities say very little, usually under 50 words. </p>
+<p>As we move toward the higher word counts (100–200 words), engagement stays remarkably flat for everyone else. Micro and Nano influencers stay grounded. Regardless of how much they write, these tiers cluster near the bottom of the engagement scale, showing that word count isn't a "ladder" they can use to climb into higher engagement brackets.</p>
+<p>There is no meaningful correlation between word count and engagement. The data proves that who is posting is far more important than how much they write. For celebrities, fame acts as an amplifier for even the smallest amount of effort. For smaller influencers, writing longer posts doesn't compensate for a smaller reach.</p>
+<h2 id="which-states-have-the-highest-engagement">Which States have the Highest Engagement?</h2>
+<p><img alt="Which States have the Highest Engagement?" src="../../assets/engagment_state.png" /></p>
+<h3 id="findings_17">Findings</h3>
+<p><strong>Maharashtra leads:</strong> It has the highest average engagement, driven by a strong presence of Celebrity influencers who generate significant interaction.</p>
+<p><strong>Tamil Nadu and Karnataka follow:</strong> These states also show high engagement levels, likely due to a combination of active influencer communities and engaged audiences.</p>
+<p><strong>Regional disparities:</strong> Engagement levels vary widely across states, suggesting that local factors such as population density, internet penetration, and cultural engagement with social media may play significant roles in driving interaction.</p>
+<p><strong>Celebrity influence:</strong> The states with the highest engagement are also those where Celebrity influencers are most active, reinforcing the idea that influencer presence is a key driver of engagement in these regions. </p>
+<h2 id="which-day-and-hour-has-the-highest-engagement-across-phases">Which Day and Hour has the Highest Engagement across Phases?</h2>
+<p><img alt="Which Day and Hour has the Highest Engagement across Phases?" src="../../assets/engagement_day_hour.png" /></p>
+<h3 id="findings_18">Findings</h3>
+<p><strong>Overall Pattern:</strong> Non-Working Hours consistently outperform Working Hours across every day and every phase. This confirms that people engage with content most during their personal time rather than work hours, regardless of the pandemic phase.</p>
+<p><strong>Friday Evening Peak:</strong> The single highest engagement hotspot is on Fridays during Non-Working Hours in  the Pre-Covid phase (346.45), making it the most active time for engagement in the entire dataset. This suggests that people were most engaged with content at the end of the workweek before the pandemic disrupted normal routines.     </p>
+<p><strong>Saturday Non-Working Hours:</strong> Unlocking is the second highest, suggesting weekend evenings during the return to normalcy were highly active.</p>
+<p><strong>Thursday Working Hours</strong> Unlocking (295.00) is surprisingly high for working hours, suggesting the Unlocking phase drove unusual weekday engagement.</p>
+<p><strong>Covid Lockdown Pattern:</strong> The Covid Lockdown column is consistently the lightest across all days and hours hence confirming our earlier finding that lockdown suppressed engagement across the board regardless of day or time.</p>
+<p><strong>Key Insight:</strong> Engagement follows human behaviour, people interact most with content during their personal time, not work hours. Friday evenings Pre-Covid represented the peak engagement window, while Covid Lockdown flattened all temporal patterns entirely, erasing the natural rhythm of online behaviour.</p>
+<h2 id="what-sentiments-do-influencers-express-in-their-content">What Sentiments do Influencers Express in their Content?</h2>
+<p>For this chart, we were looking at what sentiment influencers actively express in their own content. The chart compares the average positive and negative sentiment scores across each influencer type, filtered to information-type posts only — that is, content created directly by the influencer.</p>
+<p><img alt="What Sentiments do Influencers Express in their Content?" src="../../assets/sentiment_influencers.png" /></p>
+<h3 id="findings_19">Findings</h3>
+<p>Negative expression is identical across all tiers. Every influencer type posts with exactly −1.06. Tier, reach, and fame have zero influence on how negatively influencers frame their content.</p>
+<p>Celebrities express the most positivity. At 1.35, Celebrities edge out all other tiers. Micro influencers express the least positivity at 1.24, with Macro and Nano tied at 1.25.</p>
+<p>Positivity outweighs negativity for all tiers. Every tier sits net-positive, meaning that regardless of influencer status, content leans more positive than negative overall.</p>
+<p>Influencer tier shapes how positively someone expresses themselves, but not how negatively. The negativity floor is universal — suggesting it reflects a general norm of content creation on the platform rather than individual influencer behaviour. Celebrities post the most positively, which may reflect more polished, brand-conscious content strategies rather than genuine differences in sentiment.</p>
+<h2 id="what-sentiment-do-audiences-direct-back-at-influencers">What Sentiment do Audiences Direct Back at Influencers?</h2>
+<p>For this chart, we examined the sentiment audiences directed at influencers through comments and interactions. The chart compares the average positive and negative sentiment scores across each influencer type, filtered to interaction-type posts only.</p>
+<p><img alt="What Sentiment do Audiences Direct Back at Influencers?" src="../../assets/sentiment_audience.png" /></p>
+<h3 id="findings_20">Findings</h3>
+<p>Negativity is mostly flat, but Nano influencers attract slightly more Celebrities and Micro influencers receive −1.06, while Macro influencers receive the least negativity at −1.04. Nano influencers stand out slightly at −1.09, the highest negative reception of all tiers, which is unexpected given their smaller reach.</p>
+<p>Celebrities and Nano influencers receive the most positivity equally. Both sit at 1.38, jointly leading the audience's positive reception. Micro influencers follow at 1.28, while Macro influencers receive the least positivity at 1.22.</p>
+<p>Macro influencers have the weakest audience reception overall. They receive the least positivity and the least negativity — suggesting their audiences are the most emotionally neutral or disengaged in their responses.</p>
+<p>Unlike expression, reception does vary more noticeably across tiers. The most striking finding is that Nano influencers — despite the smallest reach — attract audience sentiment comparable to Celebrities. This suggests that community closeness at the Nano level drives stronger emotional reactions, both positive and negative, than the middle tiers</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 DSA3050 SS26 USIU - Africa
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.expand", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

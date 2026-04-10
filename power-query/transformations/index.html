@@ -1,0 +1,1455 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://mistiusiu.github.io/DSA3050_SS26_USIU_BI_Group_Project/power-query/transformations/">
+      
+      
+        <link rel="prev" href="../../project-setup/data-dictionary/">
+      
+      
+        <link rel="next" href="../../data-modeling/star-schema/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/usiu-logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>ETL & Power Query - Social Media Sentiment BI Analytics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra-minimal.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#etl-power-query" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Social Media Sentiment BI Analytics" class="md-header__button md-logo" aria-label="Social Media Sentiment BI Analytics" data-md-component="logo">
+      
+  <img src="../../assets/usiu-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Social Media Sentiment BI Analytics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ETL & Power Query
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Social Media Sentiment BI Analytics" class="md-nav__button md-logo" aria-label="Social Media Sentiment BI Analytics" data-md-component="logo">
+      
+  <img src="../../assets/usiu-logo.png" alt="logo">
+
+    </a>
+    Social Media Sentiment BI Analytics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project Definition
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Project Definition
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project-setup/problem-statement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Statement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project-setup/data-dictionary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Dictionary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ETL & Power Query
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ETL & Power Query
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="CONTENTS">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      CONTENTS
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#extract" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extract
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transform
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transform">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-cleaning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Cleaning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Cleaning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dropped-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dropped Columns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#renamed-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Renamed Columns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computed-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Computed Columns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remapped-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remapped Columns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-type-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Type Conversion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Load
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Load">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#power-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Power Query
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Power Query">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fact-table-social-media-engagement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fact Table Social Media Engagement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimension-table-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimension Table State
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimension-table-post-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimension Table Post Type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimension-table-content-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimension Table Content Type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimension-table-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimension Table Phase
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimension-table-open-hours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimension Table Open Hours
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimension-table-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimension Table Date
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimension-table-day-power-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimension Table Day Power Query
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimension-table-day-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimension Table Day Type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimension-table-influencer-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimension Table Influencer Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimension-table-verbosity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimension Table Verbosity
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-modeling/star-schema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DAX Calculations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DAX Calculations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dax-development/measures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Measures Library
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dax-development/logic-deep-dive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Logic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Insights & Visuals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Insights & Visuals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/visuals-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Strategy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/insights/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Business Insights
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="CONTENTS">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      CONTENTS
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#extract" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extract
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transform
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transform">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-cleaning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Cleaning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Cleaning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dropped-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dropped Columns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#renamed-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Renamed Columns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computed-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Computed Columns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remapped-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remapped Columns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-type-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Type Conversion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Load
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Load">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#power-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Power Query
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Power Query">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fact-table-social-media-engagement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fact Table Social Media Engagement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimension-table-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimension Table State
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimension-table-post-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimension Table Post Type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimension-table-content-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimension Table Content Type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimension-table-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimension Table Phase
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimension-table-open-hours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimension Table Open Hours
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimension-table-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimension Table Date
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimension-table-day-power-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimension Table Day Power Query
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimension-table-day-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimension Table Day Type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimension-table-influencer-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimension Table Influencer Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimension-table-verbosity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimension Table Verbosity
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="etl-power-query">ETL &amp; Power Query</h1>
+<h2 id="extract">Extract</h2>
+<p>The raw data had 41 columns with redundancy present. Certain columns represented roughly the same thing and were not needed for analysis.</p>
+<p><img alt="Raw Data Screenshot 1" src="../../assets/raw_data_1.png" /></p>
+<p><img alt="Raw Data Screenshot 2" src="../../assets/raw_data_2.png" /></p>
+<h2 id="transform">Transform</h2>
+<h3 id="data-cleaning">Data Cleaning</h3>
+<h4 id="dropped-columns">Dropped Columns</h4>
+<p>The <code>Sno</code> and <code>X</code> columns are roughly the same thing. <code>Sno</code> handled a continuous count throughout the whole dataset while <code>X</code> reset to 1 every time the <code>State</code> changed. Moreover, they are not needed thus they were dropped from the dataset.</p>
+<p>The <code>conversation_id</code> and <code>id</code> field are pretty much the same values and are not needed thus they are dropped. The <code>Status text</code> field is dropped since sentiment analysis has already been performed on it and hence has become obsolete.</p>
+<p>The <code>3-Phase</code> and <code>4-Phase</code> columns represent roughly the same concepts with <code>4-Phase</code> encompassing more categorical splitting of time. Hence, only one is needed and the more descriptive one (<code>4-Phase</code>) is retained.</p>
+<p>The columns <code>Time</code> and <code>OpnHrs</code> are the same values in practice hence since <code>OpnHrs</code> is a better descriptor it is the one that is retained. The Linguistic Inquiry and Word Count (LWIC) columns except <code>Positive</code>, <code>Negative</code>, <code>Total_Sentiment</code>, and <code>WC</code> are dropped since they offer no explaining power for business problems. They are used as intermediate columns to compute the positive, negative, and total sentiments from a piece of content.</p>
+<h4 id="renamed-columns">Renamed Columns</h4>
+<p>The <code>Date1</code> column is renamed to <code>Date</code> and <code>DateDay</code> to <code>Day</code>. The <code>Day</code> column is renamed to <code>Day_Type</code>. The column <code>OpnHrs</code> is renamed to <code>Open_Hours</code> to align with good grammar. The <code>Followers</code> column is renamed to <code>Number_Of_Followers</code> for increased clarity. The <code>Vividness</code> column is renamed to <code>Post_Type</code> for it to be a lot more functional- since it holds the different media types a post can be. The <code>WC</code> column is expanded to <code>Word_Count</code>.</p>
+<p>While renaming the columns the snake and camel cases were merged thus following the pattern capitalizing the first letter and inserting an underscore between words (<code>Retweet_Count</code> for example).</p>
+<h4 id="computed-columns">Computed Columns</h4>
+<p>Using the <code>Number_Of_Followers</code> column the <code>Influencer_Status</code> column was created. The following bands were employed.</p>
+<ul>
+<li>&lt;= 10,000 &rarr; Nano Influencer</li>
+<li>&lt;= 100,000 &rarr; Micro Influencer</li>
+<li>&lt;= 1,000,000 &rarr; Macro Influencer</li>
+<li>&gt; 1,000,000 &rarr; Celebrity</li>
+</ul>
+<p>From these bands, in our entire dataset the <em>Celebrity</em> status was the third highest one. And the <em>Nano Influencer</em> status was the least had the lowest representation.</p>
+<p>Using the <code>Word Count</code> column the <code>Verbosity</code> column was created with the following categories.</p>
+<ul>
+<li>&lt;= 20 &rarr; Low</li>
+<li>&lt;= 60 &rarr; Medium</li>
+<li>&lt;= 120 &rarr; High</li>
+<li>&gt; 120 &rarr; Extreme</li>
+</ul>
+<p>The <em>Medium</em> band holds the largest number of posts.</p>
+<h4 id="remapped-columns">Remapped Columns</h4>
+<p>The <code>State</code> and <code>Open_Hours</code> columns had inconsistent naming and abbreviation of values thus they were remapped.</p>
+<p>For <code>State</code> the map was:</p>
+<p><img alt="State Map" src="../../assets/state_map.png" /></p>
+<p>And for <code>Open_Hours</code>:</p>
+<p><img alt="Open Hours Map" src="../../assets/open_hours_map.png" /></p>
+<h4 id="data-type-conversion">Data Type Conversion</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Column Name</th>
+<th style="text-align: left;">Data Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">State</td>
+<td style="text-align: left;">Text</td>
+</tr>
+<tr>
+<td style="text-align: left;">Retweet_Count</td>
+<td style="text-align: left;">Whole Number</td>
+</tr>
+<tr>
+<td style="text-align: left;">Reply_Count</td>
+<td style="text-align: left;">Whole Number</td>
+</tr>
+<tr>
+<td style="text-align: left;">Like_Count</td>
+<td style="text-align: left;">Whole Number</td>
+</tr>
+<tr>
+<td style="text-align: left;">Quote_Count</td>
+<td style="text-align: left;">Whole Number</td>
+</tr>
+<tr>
+<td style="text-align: left;">Engagement</td>
+<td style="text-align: left;">Whole Number</td>
+</tr>
+<tr>
+<td style="text-align: left;">Date</td>
+<td style="text-align: left;">Date</td>
+</tr>
+<tr>
+<td style="text-align: left;">Open_Hours</td>
+<td style="text-align: left;">Text</td>
+</tr>
+<tr>
+<td style="text-align: left;">Day</td>
+<td style="text-align: left;">Text</td>
+</tr>
+<tr>
+<td style="text-align: left;">Day_Type</td>
+<td style="text-align: left;">Text</td>
+</tr>
+<tr>
+<td style="text-align: left;">4_Phase</td>
+<td style="text-align: left;">Text</td>
+</tr>
+<tr>
+<td style="text-align: left;">Number_Of_Followers</td>
+<td style="text-align: left;">Whole Number</td>
+</tr>
+<tr>
+<td style="text-align: left;">Post_Type</td>
+<td style="text-align: left;">Text</td>
+</tr>
+<tr>
+<td style="text-align: left;">Content_Type</td>
+<td style="text-align: left;">Text</td>
+</tr>
+<tr>
+<td style="text-align: left;">Word_Count</td>
+<td style="text-align: left;">Whole Number</td>
+</tr>
+<tr>
+<td style="text-align: left;">Positive_Sentiment</td>
+<td style="text-align: left;">Whole Number</td>
+</tr>
+<tr>
+<td style="text-align: left;">Negative_Sentiment</td>
+<td style="text-align: left;">Whole Number</td>
+</tr>
+<tr>
+<td style="text-align: left;">Total_Sentiment</td>
+<td style="text-align: left;">Whole Number</td>
+</tr>
+<tr>
+<td style="text-align: left;">Influencer_Status</td>
+<td style="text-align: left;">Text</td>
+</tr>
+<tr>
+<td style="text-align: left;">Verbosity</td>
+<td style="text-align: left;">Text</td>
+</tr>
+</tbody>
+</table>
+<h2 id="load">Load</h2>
+<h3 id="power-query">Power Query</h3>
+<h4 id="fact-table-social-media-engagement">Fact Table Social Media Engagement</h4>
+<p><img alt="Fact Table Social Media Engagement Power Query" src="../../assets/fact_social_media_power_query.png" /></p>
+<h4 id="dimension-table-state">Dimension Table State</h4>
+<p><img alt="Dimension Table State Power Query" src="../../assets/dim_state_power_query.png" /></p>
+<h4 id="dimension-table-post-type">Dimension Table Post Type</h4>
+<p><img alt="Dimension Table Post Type Power Query" src="../../assets/dim_post_type_power_query.png" /></p>
+<h4 id="dimension-table-content-type">Dimension Table Content Type</h4>
+<p><img alt="Dimension Table Content Type Power Query" src="../../assets/dim_content_type_power_query.png" /></p>
+<h4 id="dimension-table-phase">Dimension Table Phase</h4>
+<p><img alt="Dimension Table Phase Power Query" src="../../assets/dim_phase_power_query.png" /></p>
+<h4 id="dimension-table-open-hours">Dimension Table Open Hours</h4>
+<p><img alt="Dimension Table Open Hours Power Query" src="../../assets/dim_open_hours_power_query.png" /></p>
+<h4 id="dimension-table-date">Dimension Table Date</h4>
+<p><img alt="Dimension Table Date Power Query" src="../../assets/dim_date_power_query.png" /></p>
+<h4 id="dimension-table-day-power-query">Dimension Table Day Power Query</h4>
+<p><img alt="Dimension Table Day Power Query" src="../../assets/dim_day_power_query.png" /></p>
+<h4 id="dimension-table-day-type">Dimension Table Day Type</h4>
+<p><img alt="Dimension Table Day Type Power Query" src="../../assets/dim_day_type_power_query.png" /></p>
+<h4 id="dimension-table-influencer-status">Dimension Table Influencer Status</h4>
+<p><img alt="Dimension Table Influencer Status Power Query" src="../../assets/dim_influencer_status_power_query.png" /></p>
+<h4 id="dimension-table-verbosity">Dimension Table Verbosity</h4>
+<p><img alt="Dimension Table Verbosity Power Query" src="../../assets/dim_verbosity_power_query.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 DSA3050 SS26 USIU - Africa
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.expand", "navigation.indexes", "navigation.top", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
